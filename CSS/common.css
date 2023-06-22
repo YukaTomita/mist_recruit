@@ -1,0 +1,260 @@
+/* ==============================
+            全体の設定
+=================================== */
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* 文字の配置（中央） */
+.text-center{
+    text-align: center;
+}
+
+/* 間隔あけ */
+.gap-control-probram {
+    height: 2rem;
+}
+
+/* 文字の配置：左揃え中央寄せ */
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .txt {
+    display: inline-block;
+    text-align: left;
+  }
+
+/* title文字：ラインの上の文字 */
+.font-style-title{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 1.3rem;   
+}
+
+/* 括弧内文字ボルドー */
+.font-style-words{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #8B2022;
+    font-size: 3rem;
+    margin: 10px auto;      
+}
+
+/* 括弧内文字ブラック */
+.font-style-words2{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 3rem;
+    margin: 10px auto;      
+}
+
+/* コメント（太字） */
+.font-style-comments{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 1.6rem;   
+}
+
+/* コメント（通常） */
+.font-style-comments2{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #000;
+    font-size: 1.4rem;   
+}
+
+/*短ライン*/
+.border-line{
+    border-top:1px solid #000;
+    width:25%
+}
+
+/*長ライン*/
+.border-line2{
+    border-top:1px solid #000;
+    width:40%
+}
+
+/* TOP画像 */
+.top-img{
+    width: 100%;
+}
+
+/*中央写真大きさ*/
+.center-img {
+    width: 500px;
+    height: auto;
+	text-align: center;
+  }
+
+
+/* 写真と文字を交互に */
+
+ul li {
+    display: flex;
+}
+
+
+ul li .photo,
+ul li .txt {
+    width: 50%;
+    box-sizing: border-box;
+}
+    
+/* 奇数の行に対して指定 */
+ul li:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+ 
+ 
+/* 写真と文字の余白 */
+ul li:nth-child(odd) .txt {
+    padding-left: 20px;
+}
+ 
+ul li:nth-child(even) .txt {
+    padding-left: 100px;
+}
+
+ul li:nth-child(odd) .photo {
+    width:50px;
+}
+
+ul li:nth-child(even) .photo {
+    width:50px;
+}
+
+
+/* TOP画像 */
+.top-img{
+    width:100%;
+}
+
+/* 画像配置（中央） */
+.img-center{
+    text-align: center;
+}
+
+/* 画像配置（右寄せ） */
+.img-right{
+    text-align: right;
+    width: 80%;
+}
+
+/* cercle */
+.cercle{
+    background-color: #8B2022;
+    color: white;
+    font-size: 2.5rem;
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    width: 400px;
+    height: 40px;
+    border-radius: 150px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+  }
+
+/* 案件・技術 */
+.flex{
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+}
+.flex div{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    width: 500px;
+    margin: 20px;
+    padding: 0 5px;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+
+/* 案件・技術title */
+.flex-title{
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+}
+.flex-title div{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    width: 500px;
+    margin: 20px;
+    padding: 0 5px;
+    color: #8B2022;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+
+
+/* ボルドー */
+.font-bordeaux{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #8B2022;
+    font-size: 1.7rem;
+    margin: 10px auto;      
+}
+
+
+/*-------------------------------
+        ヘッダーフッター
+-------------------------------*/
+header,footer {
+    background-color: #eee;
+  }
+  
+  .header,.footer,.nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header,.footer {
+    padding: 20px 0;
+  }
+  
+  .nav li {
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .nav a:hover {
+    color: #fff;
+    transition: all 0.3s;
+  }
+  
+  .content {
+    height: 300px;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    padding: 30px 0;
+    font-size: 10px;
+    color: #aaa;
+  }
