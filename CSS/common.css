@@ -80,18 +80,21 @@ body{
 
 /*短ライン*/
 .border-line{
-    align-items: center;
-    border-top:1px solid #000;
-    width:25%
+  border-top:1px solid #000;
+  width:25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 10px auto;
 }
 
 /*長ライン*/
 .border-line2{
-    align-items: center;
-    border-top:1px solid #000;
-    width:40%
+  border-top:1px solid #000;
+  width:40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 10px auto;
 }
-
 /* TOP画像 */
 .top-img{
     width: 100%;
