@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- css,js -->
-    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
     <script type="text/javascript" src="js/common.js"></script>
     <!-- favicon -->
     <link rel="icon" href="img/favicon.ico">
@@ -42,42 +43,44 @@
 </head>
 
 <body>
+
   <h1>エントリー</h1>
+
+  <div class="gap-control-probram"></div>
+
+  <div>
+    <p>以下の各項目に必要事項を入力し、確認画面の「送信」ボタンを押してください。<br>
+      「必須」マークはご入力必須項目になります。<br><br>      
+      ※履歴書・職務経歴書・ポートフォリオなどのファイルの添付がある場合は個人情報<br>
+      の取り扱いについてのチェックボックスが必須。</p>
+  </div>
   <form action="submit.php" method="POST">
 
-    <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">お問い合わせ種別:</label>
-      <select name="inquiry-type" required>
-        <option value="">選択してください</option>
-        <option value="製品について">製品について</option>
-        <option value="サポートについて">サポートについて</option>
-        <option value="その他">その他</option>
-      </select>
-    </div>
-    <br>
+    <div class="gap-control-probram"></div>
+    <div class="gap-control-probram"></div>
 
     <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">お名前（漢字） ※必須:</label>
+      <label style="flex-basis: 400px; margin-right: 10px;">お名前（漢字） ※必須</label>
       <div>
-        <label>姓</label><input type="text" name="last-name" placeholder="みすと" required>
+        <label>姓 </label><input type="text" name="last-name" placeholder="みすと" style="width: 300px" required>
         <br>
-        <label>名</label><input type="text" name="first-name" placeholder="太郎" required>
+        <label>名 </label><input type="text" name="first-name" placeholder="太郎" style="width: 300px" required>
       </div>
     </div>
     <br>
 
     <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">フリガナ（全角カナ） ※必須:</label>
+      <label style="flex-basis: 400px; margin-right: 10px;">フリガナ（全角カタカナ） ※必須</label>
       <div>
-        <label>セイ</label><input type="text" name="last-name" placeholder="ミスト" required>
+        <label>姓 </label><input type="text" name="last-name" placeholder="ミスト" style="width: 300px" required>
         <br>
-        <label>メイ</label><input type="text" name="first-name" placeholder="タロウ" required>
+        <label>名 </label><input type="text" name="first-name" placeholder="タロウ" style="width: 300px" required>
       </div>
     </div>
     <br>
 
     <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">経験年数 ※必須</label>
+      <label style="flex-basis: 400px; margin-right: 10px;">経験年数 ※必須</label>
       <input type="radio" name="experience" value="1-2" required>
       <label>1～2年</label>
       <input type="radio" name="experience" value="2-5">
@@ -90,19 +93,22 @@
     <br>
     
     <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">メールアドレス（半角） ※必須</label>
-      <input type="email" name="email" placeholder="例）ar-soft@arcadia-soft.co.jp" required>
+      <label style="flex-basis: 400px; margin-right: 10px;">メールアドレス（半角） ※必須</label>
+      <input type="email" name="email" placeholder="例）ar-soft@arcadia-soft.co.jp" style="width: 300px" required>
     </div>
     <br>
 
     <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">再入力（半角） ※必須</label>
-      <input type="email" name="confirm-email" placeholder="例）ar-soft@arcadia-soft.co.jp" required><br>※入力ミス防止のため同じメールアドレスを2度ご入力ください。
+      <label style="flex-basis: 400px; margin-right: 10px;">再入力（半角） ※必須</label>
+      <input type="email" name="confirm-email" placeholder="例）ar-soft@arcadia-soft.co.jp" style="width: 300px" required>
+    </div>
+    <div class="form-row">
+      <p class="input-description">※入力ミス防止のため同じメールアドレスを2度ご入力ください。</p>
     </div>
     <br>
 
     <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">希望面談形式 ※必須</label>
+      <label style="flex-basis: 400px; margin-right: 10px;">希望面談形式 ※必須</label>
       <input type="radio" name="experience" value="1-2" required>
       <label>選考面談</label>
       <input type="radio" name="experience" value="2-5">
@@ -112,7 +118,7 @@
 
 
     <div style="display: flex; align-items: center;">
-      <label style="flex-basis: 150px; margin-right: 10px;">希望種別:</label>
+      <label style="flex-basis: 400px; margin-right: 10px;">希望種別:</label>
       <input type="radio" name="role" value="アプリ開発エンジニア" required>
       <label>アプリ開発エンジニア</label>
       <input type="radio" name="role" value="インフラエンジニア" required>
@@ -125,6 +131,23 @@
     </div>
     <br>
 
-    
+<!-- スキルシート -->
+
+<div style="display: flex; align-items: center;">
+  <label style="flex-basis: 400px; margin-right: 10px;">備考欄</label>
+  <textarea style="width: 400px;height: 100px;"></textarea>
+
+
+</div>
+
+
+<form>
+  <div>
+    <input type="checkbox" id="agree" />
+    <label for="agree">同意する</label>
+  </div>
+  <button type="submit" class="submit-btn" id="submit-btn" disabled>送信する</button>
+</form>
+
 </body>
 </html>
