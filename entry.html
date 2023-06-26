@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta name="description" content="株式会社MIST solution - トップページ 株式会社ミストソリューションは、異なった業界との接点を持つことで化学反応を起こし、
+    幅広いニーズにより的確にお応えできる、常に進化しているIT企業です。">
+    <meta name="keywords" content="株式会社ミストソリューション,ミストソリューション,MISTsolution,ミスト" />
+    <meta name="copyright" content="© 1997, 2023 mistsolution. All Rights Reserved.">
+    <meta name="format-detection" content="telephone=no">
+    <!-- OGP -->
+    <meta property="og:url" content="https://www.mistnet.co.jp">
+    <meta property="og:title" content="株式会社MIST solution | WEBサイト"/>
+    <meta property="og:site_name" content="株式会社MIST solution | WEBサイト">
+    <meta name="og:description" content="株式会社MIST solution - トップページ 株式会社ミストソリューションは、異なった業界との接点を持つことで化学反応を起こし、
+    幅広いニーズにより的確にお応えできる、常に進化しているIT企業です。">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja-JP">
+    <meta property="og:image" content="assets/images/mist-ogp.jpg">
+    <meta name="twitter:card" content="summary"/>
+    <!-- 各々変更 -->
+    <title>エントリー</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- css,js -->
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- googlefonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- swiper -->
+    <link href="">
+    <link href="">
+    <link href="">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">  
+</head>
+
+<body>
+  <h1>エントリー</h1>
+  <form action="submit.php" method="POST">
+
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">お問い合わせ種別:</label>
+      <select name="inquiry-type" required>
+        <option value="">選択してください</option>
+        <option value="製品について">製品について</option>
+        <option value="サポートについて">サポートについて</option>
+        <option value="その他">その他</option>
+      </select>
+    </div>
+    <br>
+
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">お名前（漢字） ※必須:</label>
+      <div>
+        <label>姓</label><input type="text" name="last-name" placeholder="みすと" required>
+        <br>
+        <label>名</label><input type="text" name="first-name" placeholder="太郎" required>
+      </div>
+    </div>
+    <br>
+
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">フリガナ（全角カナ） ※必須:</label>
+      <div>
+        <label>セイ</label><input type="text" name="last-name" placeholder="ミスト" required>
+        <br>
+        <label>メイ</label><input type="text" name="first-name" placeholder="タロウ" required>
+      </div>
+    </div>
+    <br>
+
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">経験年数 ※必須</label>
+      <input type="radio" name="experience" value="1-2" required>
+      <label>1～2年</label>
+      <input type="radio" name="experience" value="2-5">
+      <label>2～5年</label>
+      <input type="radio" name="experience" value="5-10">
+      <label>5～10年</label>
+      <input type="radio" name="experience" value="10+">
+      <label>10年以上</label>
+    </div>
+    <br>
+    
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">メールアドレス（半角） ※必須</label>
+      <input type="email" name="email" placeholder="例）ar-soft@arcadia-soft.co.jp" required>
+    </div>
+    <br>
+
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">再入力（半角） ※必須</label>
+      <input type="email" name="confirm-email" placeholder="例）ar-soft@arcadia-soft.co.jp" required><br>※入力ミス防止のため同じメールアドレスを2度ご入力ください。
+    </div>
+    <br>
+
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">希望面談形式 ※必須</label>
+      <input type="radio" name="experience" value="1-2" required>
+      <label>選考面談</label>
+      <input type="radio" name="experience" value="2-5">
+      <label>カジュアル面談</label>
+    </div>
+    <br>
+
+
+    <div style="display: flex; align-items: center;">
+      <label style="flex-basis: 150px; margin-right: 10px;">希望種別:</label>
+      <input type="radio" name="role" value="アプリ開発エンジニア" required>
+      <label>アプリ開発エンジニア</label>
+      <input type="radio" name="role" value="インフラエンジニア" required>
+      <label>インフラエンジニア</label>
+      <br>
+      <input type="radio" name="role" value="Webエンジニア" required>
+      <label>Webエンジニア</label>
+      <input type="radio" name="role" value="Webデザイナー" required>
+      <label>Webデザイナー</label>
+    </div>
+    <br>
+
+    
+</body>
+</html>
