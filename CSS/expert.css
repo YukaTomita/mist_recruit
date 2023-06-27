@@ -1,0 +1,99 @@
+/* 写真と文字を交互に */
+
+ul li {
+    display: flex;
+}
+
+
+ul li .photo,
+ul li .txt {
+    width: 50%;
+    box-sizing: border-box;
+}
+    
+/* 奇数の行に対して指定 */
+ul li:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+ 
+ 
+/* 写真と文字の余白 */
+ul li:nth-child(odd) .txt {
+    padding-left: 20px;
+}
+ 
+ul li:nth-child(even) .txt {
+    padding-left: 100px;
+}
+
+ul li:nth-child(odd) .photo {
+    width:50px;
+}
+
+ul li:nth-child(even) .photo {
+    width:50px;
+}
+
+/* cercle */
+.cercle{
+    background-color: #8B2022;
+    color: white;
+    font-size: 2.5rem;
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    width: 400px;
+    height: 40px;
+    border-radius: 150px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+  }
+
+/* 案件・技術 */
+.flex{
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+}
+.flex div{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    width: 500px;
+    margin: 20px;
+    padding: 0 5px;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+
+/* 案件・技術title */
+.flex-title{
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+}
+.flex-title div{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    width: 500px;
+    margin: 20px;
+    padding: 0 5px;
+    color: #8B2022;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+
+/* ボルドー */
+.font-bordeaux{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #8B2022;
+    font-size: 1.7rem;
+    margin: 10px auto;      
+}

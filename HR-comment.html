@@ -39,16 +39,35 @@
 
 </head>
 <body>
-    <!-- ヘッダー読み込み -->
-    <script>header();</script>
 
-    <!-- ページトップ -->
-    <div id="page_top"><a href="#"></a></div>
-
-    <div class="wrap"> 
-
-    <!-- ヘッダー開け -->
-    <div class="mt-header"></div>
+     <!-- header -->
+     <header class="header flex-box">
+        <h1 class="site-title">
+            <a href="#!">
+                <img src="img/グループ 1315.png" alt="ロゴ">
+            </a>
+        </h1>
+        <a href="#!"><img class="header-instagram" src="img/グループ 790.png" alt="Instagram"></a>
+        <a href="#!"><img class="header-twitter" src="img/white background.png" alt="Twitter"></a>
+        <a href="#!" class="header-entry">エントリー</a>
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#!">Service</a></li>
+                <li class="nav-item"><a href="#!">About</a></li>
+                <li class="nav-item"><a href="#!">News</a></li>
+                <li class="nav-item"><a href="#!">Conetact</a></li>
+                <li class="nav-item"><a href="#!">Recruit</a></li>
+            </ul>
+        </nav>
+        <button class="burger-btn">
+            <span class="bars">
+                <span class="bar bar_top"></span>
+                <span class="bar bar_mid"></span>
+                <span class="bar bar_bottom"></span>
+            </span>
+        </button>
+        <span class="burger-musk"></span>
+    </header>
 
     <!-- トップ画像 -->
     <div><img src="img/HR-TOP.png" class="top-img" alt=""></div>
@@ -263,12 +282,43 @@
         </li>
     </ul>
      
+<!--エントリー-->
 
-<!-- エントリー以下 -->
-<script>entry();</script>
+    <div class="entry">
+        <P class="font-style-comments entry-space">まずはあなたのキャリアプランを聞かせてください。</P>
+        <button onclick="location.href='#!'" class="entry-button">　エントリー</button>
+        <p class="entry-red">入社からプロジェクト着任までのフローが知りたい方はこちら ></p>
+    </div>
+    <div class="flex-link">
+        <img class="link-img" src="img/グループ 1824.png">
+        <img class="link-img" src="img/グループ 1826.png">
+    </div>
+    <div class="flex-link">
+        <img class="link-img" src="img/グループ 1827.png">
+        <img class="link-img" src="img/グループ 1828.png">
+    </div>
 
-<!-- ヘッダー -->
-<script>footer();</script>
-
+    <!--インスタ-->
+    <img class="instagram" src="img/グループ 1098.png" alt="画像">
+    <div class="flex-link">
+        <img class="silver" src="img/長方形 54.png" alt="画像">
+        <img class="silver" src="img/長方形 54.png" alt="画像">
+        <img class="silver" src="img/長方形 54.png" alt="画像">
+    </div>
+    <div class="flex-link">
+        <img class="silver" src="img/長方形 54.png" alt="画像">
+        <img class="silver" src="img/長方形 54.png" alt="画像">
+        <img class="silver" src="img/長方形 54.png" alt="画像">
+    </div>
+    <p class="look">もっと見る</p>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+    <small>&copy; 1997,2023 mistsolution.All Rights Reserved.</small>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="js\header.js"></script>
+<script src="js/upperclassman.js"></script>
 </body>
-</html>
+</html>  
