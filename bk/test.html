@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>お問い合わせフォーム</title>
+  <style>
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .input-group label {
+      margin-right: 10px;
+      width: 80px;
+      text-align: right;
+    }
+    .input-group input[type="text"],
+    .input-group input[type="email"] {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>お問い合わせフォーム</h1>
+  <form action="process.php" method="POST">
+    <div class="input-group">
+      <label for="last_name">姓：</label>
+      <input type="text" name="last_name" id="last_name" value="山田" required>
+    </div>
+    <div class="input-group">
+      <label for="first_name">名：</label>
+      <input type="text" name="first_name" id="first_name" value="太郎" required>
+    </div>
+    <div class="input-group">
+      <label for="email">メールアドレス：</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <br><br>
+
+    <label for="message">メッセージ：</label><br>
+    <textarea name="message" id="message" rows="5" required></textarea><br><br>
+
+    <input type="submit" value="送信">
+  </form>
+</body>
+</html>
