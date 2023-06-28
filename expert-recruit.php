@@ -20,8 +20,6 @@
     <meta name="twitter:card" content="summary"/>
     <!-- 各々変更 -->
     <title>ベテラン向け</title>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- css,js -->
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/common.css" type="text/css">
