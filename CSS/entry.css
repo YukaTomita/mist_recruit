@@ -40,6 +40,7 @@
     width:130px;
   }
 
+/* ラジオボタン */
   input[type="radio"] {
     width: 16px; /* 幅を適宜調整 */
     height: 16px; /* 高さを適宜調整 */
@@ -71,38 +72,24 @@
     height: 20px;
   }
 
+/* 備考欄 */
   textarea{
-    width: 800px;
+    width: 700px;
     height: 150px;
     text-align: left;
   }
   
 /* 個人情報取り扱いスクロール */
 
-.container {
-    width: 800px; /* 枠の幅を適宜調整 */
-    height: 400px; /* 枠の高さを適宜調整 */
-    border: 1px solid #000; /* 枠の境界線を追加 */
-    overflow: hidden; /* スクロールバーを非表示 */
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
-    
-  .scrollable-content {
-    padding: 10px; /* コンテンツと枠の間隔を調整 */
-    height: 100%; /* コンテンツの高さを100%に設定 */
-    overflow-y: scroll; /* 縦方向のスクロールを有効にする */
-  }
-
 .scrolling-box {
-    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 600px;
     height: 300px;
+    overflow: hidden; /* 境界線非表示 */
     border: 1px solid #000; /* 枠の境界線を追加 */
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
 .scrolling-content {
@@ -115,4 +102,25 @@
 
 .scrolling-content::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera用 */
+  }
+
+  p{
+    text-align: left;
+  }
+
+  .pi-title{
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  .word1{
+    font-size: 1.8rem;
+    font-weight: bolder;
+  }
+
+/* 保留　備考欄とスタート合わせるためにmargin入れるか確認 */
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
   }

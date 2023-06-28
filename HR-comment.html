@@ -260,23 +260,27 @@
     <!-- 写真・コメント交互 -->
 
     <!-- 写真・コメント -->
-    <ul>
-        <li>
-           <p>テキストテキストテキストテキストテキスト</p>
-            <img src="img/blank.png" alt="">        
-        </li>
-        <li>
-            <p>テキストテキストテキストテキストテキスト</p>
-            <img src="img/blank.png" alt="">
-        </li>
-        <li>
-            <p>テキストテキストテキストテキストテキスト</p>
-            <img src="img/blank.png" alt="">        
-        </li>
-    </ul>
+    <div class="wrapper">
+        <section class="case">
+            <article class="case__list">
+              <div class="case__item">
+                <p class="case__item__text">テキストテキストテキストテキストテキスト</p>
+                <img class="case__item__img" src="img/blank.png" alt="画像1">
+              </div>
+              <div class="case__item">
+                <p class="case__item__text">テキストテキストテキストテキストテキスト</p>
+                <img class="case__item__img" src="img/blank.png" alt="画像2">
+              </div>
+              <div class="case__item">
+                <p class="case__item__text">テキストテキストテキストテキストテキスト</p>
+                <img class="case__item__img" src="img/blank.png" alt="画像2">
+              </div>
+            </article>
+          </section>
+        </div>
      
 <!--エントリー-->
-
+    <div class="wrapper">
     <div class="entry">
         <P class="font-style-comments entry-space">まずはあなたのキャリアプランを聞かせてください。</P>
         <button onclick="location.href='#!'" class="entry-button">　エントリー</button>
@@ -309,6 +313,7 @@
     <footer class="footer">
     <small>&copy; 1997,2023 mistsolution.All Rights Reserved.</small>
     </footer>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="js\header.js"></script>
