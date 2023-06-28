@@ -1,0 +1,792 @@
+/* ==============================
+            全体の設定
+=================================== */
+​
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+​
+/* 文字の配置：左揃え中央寄せ */
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+​
+/* title文字：ラインの上の文字 */
+.font-style-title{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 1.3rem;   
+}
+​
+/* 括弧内文字ボルドー */
+.font-style-words{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #8B2022;
+    font-size: 3rem;
+    margin: 10px auto;   
+}
+​
+/* 括弧内文字ブラック */
+.font-style-words2{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 3rem;
+    margin: 10px auto;   
+}
+​
+/* コメント（太字） */
+.font-style-comments{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 1.6rem;   
+}
+​
+/* コメント（通常） */
+.font-style-comments2{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #000;
+    font-size: 1.4rem;   
+}
+​
+/*短ライン*/
+.border-line{
+    border-top:1px solid #000;
+    width:25%
+}
+​
+/*長ライン*/
+.border-line2{
+    border-top:1px solid #000;
+    width:40%
+}
+
+.image-container {
+    position: relative;
+  }
+  
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-wrapper img {
+    width: 500px; /* 適切な幅を指定 */
+    height: auto; /* 高さは自動調整 */
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .text-img {
+    width: 500px; /* 適切な幅を指定 */
+    height: auto; /* 高さは自動調整 */
+  }
+
+  .image-wrapper .background-img1,
+  .image-wrapper .background-img2 {
+    width: 49%;
+    height: auto;
+  }
+  
+  .text-overlay .text-img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.0); /* 拡大率を指定（例: 1.5倍） */
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .top-overlay {
+    top: 8%; /* 上部からの位置調整（例: 10%） */
+  }
+
+  /* 今をそして未来も_白バナー*/
+  .banner-img {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    right: 1%;
+    height: auto;
+ }
+
+/* 積極的に面談中_赤バナー */  
+ .banner-img1 {
+   position: absolute;
+   top: 60%;
+   width: 35%;
+   right: 32%;
+   height: auto;
+ }
+
+/* ルーキー・スペシャリスト_透過バナー */
+ .banner-img2 {
+   position: absolute;
+   left: 50%;
+   top: 80%;
+   width: 49%;
+   height: auto;
+ }
+
+ .banner-img3 {
+   position: absolute;
+   right: 50%;
+   top: 80%;
+   width: 49%;
+   height: auto;
+ }
+
+ .banner-img10 {
+  position: absolute;
+  left: 8%;
+  top: 80%;
+  width: 35%;
+  height: auto;
+}
+
+.banner-img11 {
+  position: absolute;
+  right: 6%;
+  top: 84%;
+  width: 3%;
+  height: auto;
+}
+.banner-img12 {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  width: 49%;
+  height: auto;
+}
+
+.banner-img13 {
+  position: absolute;
+  left: 42%;
+  top: 84%;
+  width: 3%;
+  height: auto;
+}
+
+/* 積極的に面談中　リンク付ける */
+ .over-img1 {
+ position: absolute;
+ top: 60%;
+ left: 36%;
+ width: 30%;
+ height: auto;
+}
+
+/* BOX画像欄 */
+.box-img {
+  position: absolute;
+  top: 105%;
+  left: -4%;
+  width: 11%;
+  height: auto;
+ }
+
+ .box-img2 {
+  position: absolute;
+  top: 105%;
+  right: -4%;
+  width: 11%;
+  height: auto;
+ }
+
+ .box-img3 {
+  position: absolute;
+  top: 105%;
+  left: 9%;
+  width: 19%;
+  height: auto;
+ }
+
+ .box-img4 {
+  position: absolute;
+  top: 105%;
+  left: 30%;
+  width: 19%;
+  height: auto;
+ }
+
+ .box-img5 {
+  position: absolute;
+  top: 105%;
+  left: 51%;
+  width: 19%;
+  height: auto;
+ }
+
+ .box-img6 {
+  position: absolute;
+  top: 105%;
+  left: 72%;
+  width: 19%;
+  height: auto;
+ }
+
+ /* BOX画像＜左＞ */
+ .box-img7 {
+  position: absolute;
+  top: 113%;
+  left: 2%;
+  width: 3%;
+  height: auto;
+ }
+
+ /* BOX画像＜右＞ */
+ .box-img8 {
+  position: absolute;
+  top: 113%;
+  right: 2%;
+  width: 3%;
+  height: auto;
+ }
+
+/* 私たちについて画像 */
+.text-img1 {
+  position: absolute;
+  top: 170%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 50%; 
+  height: auto; 
+}
+
+/* 私たちについて_線 */
+.text-img2 {
+  position: absolute;
+  top:159%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto; 
+}
+
+/* 当社の特徴 */
+.text-img3 {
+  position: absolute;
+  top: 220%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto; 
+}
+
+/* 私たちが選ばれる5つの理  */
+.text-img4 {
+  position: absolute;
+  top: 270%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto; 
+}
+
+/* 私たちが選ばれる5つの理画像  */
+
+/* 私たちが選ばれる5つの理テキスト  */
+.text-img5 {
+  position: absolute;
+  top: 325%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto; 
+}
+
+/* スペシャリスト  */
+.text-img6 {
+  position: absolute;
+  top: 395%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto; 
+}
+
+.text-img7 {
+  position: absolute;
+  top: 445%; 
+  left: 37%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto; 
+}
+
+.rink-img1 {
+  position: absolute;
+  top: 463%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto; 
+}
+
+/* ルーキー  */
+.text-img8 {
+  position: absolute;
+  top: 535%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto; 
+}
+
+.text-img9 {
+  position: absolute;
+  top: 593%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto; 
+}
+
+.rink-img2 {
+  position: absolute;
+  top: 602%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto; 
+}
+
+/* 社員の声  */
+.text-img10 {
+  position: absolute;
+  top: 673%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto; 
+}
+
+.text-img11 {
+  position: absolute;
+  top: 725%; 
+  left: 38%;
+  transform: translate(-50%, -50%);
+  width: 51%;
+  height: auto; 
+}
+
+.rink-img3 {
+  position: absolute;
+  top: 743%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto; 
+}
+
+/* サポート体制  */
+.text-img12 {
+  position: absolute;
+  top: 815%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto; 
+}
+
+.text-img13 {
+  position: absolute;
+  top: 870%; 
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 51%;
+  height: auto; 
+}
+
+.rink-img4 {
+  position: absolute;
+  top: 890%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto; 
+}
+
+/* 応募要項  */
+.text-img14 {
+  position: absolute;
+  top: 960%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto; 
+}
+
+.text-img15 {
+  position: absolute;
+  top: 1012%; 
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 51%;
+  height: auto; 
+}
+
+.rink-img5 {
+  position: absolute;
+  top: 1031%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto; 
+}
+
+/* エントリー  */
+.layer-img {
+  position: absolute;
+  top: 1095%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto; 
+}
+
+.text-img16 {
+  position: absolute;
+  top: 1108%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto; 
+}
+
+.layer1-img {
+  position: absolute;
+  top: 1125%; 
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto; 
+}
+
+/* 私たちのコトがもっと知りたい方へ  */
+.text-img17 {
+  position: absolute;
+  top: 1167%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto; 
+}
+
+/* 公認クラブ  */
+.text-img18 {
+  position: absolute;
+  top: 1200%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto; 
+}
+
+/* ガチサル  */
+.text-img19 {
+  position: absolute;
+  top: 1232%; 
+  left: 19.5%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: auto; 
+}
+
+/* 安西  */
+.text-img20 {
+  position: absolute;
+  top: 1232%; 
+  left: 34.5%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: auto; 
+}
+
+/* 超人部  */
+.text-img21 {
+  position: absolute;
+  top: 1232%; 
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: auto; 
+}
+
+/* アナログ  */
+.text-img39 {
+  position: absolute;
+  top: 1229%; 
+  right: 25%;
+  transform: translate(-50%, -50%);
+  width: 11.5%;
+  height: auto; 
+}
+/*　カポエラ  */
+.text-img40 {
+  position: absolute;
+  top: 1232%; 
+  right: 12%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: auto; 
+}
+/* 上記不随テキスト  */
+.text-img22 {
+  position: absolute;
+  top: 1265%; 
+  left: 48.5%;
+  transform: translate(-50%, -50%);
+  width:70%;
+  height: auto; 
+}
+
+/* その他　新事業について  */
+.text-img23 {
+  position: absolute;
+  top: 1330%; 
+  left: 48.5%;
+  transform: translate(-50%, -50%);
+  width:50%;
+  height: auto; 
+}
+
+.text-img24 {
+  position: absolute;
+  top: 1380%; 
+  left: 48.5%;
+  transform: translate(-50%, -50%);
+  width:50%;
+  height: auto; 
+}
+
+.text-img25 {
+  position: absolute;
+  top: 1415%; 
+  left: 48.5%;
+  transform: translate(-50%, -50%);
+  width:35%;
+  height: auto; 
+}
+
+.text-img26 {
+  position: absolute;
+  top: 1435%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:35%;
+  height: auto; 
+}
+
+.text-img27 {
+  position: absolute;
+  top: 1463%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:35%;
+  height: auto; 
+}
+
+.text-img28 {
+  position: absolute;
+  top: 1488%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:20%;
+  height: auto; 
+}
+
+.text-img29 {
+  position: absolute;
+  top: 1530%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:20%;
+  height: auto; 
+}
+
+.text-img30 {
+  position: absolute;
+  top: 1570%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:60%;
+  height: auto; 
+}
+
+.text-img31 {
+  position: absolute;
+  top: 1615%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:60%;
+  height: auto; 
+}
+
+.text-img32 {
+  position: absolute;
+  top: 1660%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:60%;
+  height: auto; 
+}
+
+/* 過去一覧を見る  */
+.text-img33 {
+  position: absolute;
+  top: 1690%; 
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width:8%;
+  height: auto; 
+}
+
+.text-img34 {
+  position: absolute;
+  top: 1710%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:85%;
+  height: auto; 
+}
+.rink-img6 {
+  position: absolute;
+  top: 1710%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:50%;
+  height: auto; 
+}
+
+.text-img35 {
+  position: absolute;
+  top: 1725%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:85%;
+  height: auto; 
+}
+.rink-img7 {
+  position: absolute;
+  top: 1725%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:50%;
+  height: auto; 
+}
+
+/* エントリー  */
+.layer-img10 {
+  position: absolute;
+  top: 1765%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto; 
+}
+
+.text-img50 {
+  position: absolute;
+  top: 1780%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto; 
+}
+
+.layer-img20 {
+  position: absolute;
+  top: 1800%; 
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto; 
+}
+
+.text-img36 {
+  position: absolute;
+  top: 1890%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:70%;
+  height: auto; 
+}
+
+/* もっと見る・代表が思うこと  */
+.rink-img8 {
+  position: absolute;
+  top: 1882.5%; 
+  left: 43.5%;
+  transform: translate(-50%, -50%);
+  width: 8%;
+  height: auto; 
+}
+/* もっと見る・キャリア・プラン  */
+.rink-img9 {
+  position: absolute;
+  top: 1882.5%; 
+  right: 12%;
+  transform: translate(-50%, -50%);
+  width:8%;
+  height: auto; 
+}
+/* もっと見る・先輩たちの紹介  */
+.rink-img10 {
+  position: absolute;
+  top: 1936.5%; 
+  left: 43.5%;
+  transform: translate(-50%, -50%);
+  width:8%;
+  height: auto; 
+}
+/* もっと見る・福利厚生  */
+.rink-img11 {
+  position: absolute;
+  top: 1936.5%; 
+  right: 12%;
+  transform: translate(-50%, -50%);
+  width: 8%;
+  height: auto; 
+}
+
+/* インスタ  */
+.text-img37 {
+  position: absolute;
+  top: 1990%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:25%;
+  height: auto; 
+}
+
+.text-img38 {
+  position: absolute;
+  top: 2050%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:50%;
+  height: auto; 
+}
