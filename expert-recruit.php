@@ -1,5 +1,41 @@
+<?php
+// データベース接続情報
+$host = 'localhost';
+$dbname = 'enterprise';
+$username = 'root';
+$password = 'root';
+
+// データベース接続
+try {
+    $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+} catch (PDOException $e) {
+    die('Database connection failed: ' . $e->getMessage());
+}
+
+// 集計クエリ実行
+$query = "SELECT option_name, COUNT(*) AS count FROM votes
+          INNER JOIN options ON votes.option_id = options.id
+          GROUP BY option_name
+          ORDER BY count DESC";
+$stmt = $db->prepare($query);
+$stmt->execute();
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// IPアドレスの取得
+$ipAddress = $_SERVER['REMOTE_ADDR'];
+
+// 同一IPアドレスでの重複投票チェック
+$query = "SELECT COUNT(*) FROM votes WHERE ip_address = :ipAddress";
+$stmt = $db->prepare($query);
+$stmt->bindValue(':ipAddress', $ipAddress);
+$stmt->execute();
+$voteCount = $stmt->fetchColumn();
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
@@ -10,33 +46,34 @@
     <meta name="format-detection" content="telephone=no">
     <!-- OGP -->
     <meta property="og:url" content="https://www.mistnet.co.jp">
-    <meta property="og:title" content="株式会社MIST solution | WEBサイト"/>
+    <meta property="og:title" content="株式会社MIST solution | WEBサイト" />
     <meta property="og:site_name" content="株式会社MIST solution | WEBサイト">
     <meta name="og:description" content="株式会社MIST solution - トップページ 株式会社ミストソリューションは、異なった業界との接点を持つことで化学反応を起こし、
     幅広いニーズにより的確にお応えできる、常に進化しているIT企業です。">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja-JP">
     <meta property="og:image" content="assets/images/mist-ogp.jpg">
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary" />
     <!-- 各々変更 -->
     <title>ベテラン向け</title>
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
     <!-- css,js -->
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/expert.css" type="text/css">
-    <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- favicon -->
     <link rel="icon" href="img/favicon.ico">
-    
+
 </head>
 
 <body>
-   
-     <!-- header -->
-     <header class="header flex-box">
+
+    <!-- header -->
+    <header class="header flex-box">
         <h1 class="site-title">
             <a href="#!">
                 <img src="img/グループ 1315.png" alt="ロゴ">
@@ -90,9 +127,95 @@
     </div>
 
     <!-- エンジニアが選ぶ企業のポイント　ランキング -->
+    <div class="wrapper">
+        <canvas id="barChart"></canvas>
 
+        <script>
+            // データの準備
+            const labels = [];
+            const data = [];
 
+            <?php foreach ($results as $result) : ?>
+                labels.push('<?php echo $result['option_name']; ?>');
+                data.push(<?php echo $result['count']; ?>);
+            <?php endforeach; ?>
 
+            // チャートの描画
+            const ctx = document.getElementById('barChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: '投票数',
+                        data: data,
+                        backgroundColor: 'transparent', // 棒グラフの背景色
+                        borderColor: '#FF2D2D', // 棒グラフの枠線の色
+                        borderWidth: 2 // 棒グラフの枠線の太さ
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: Math.max(...data) + 2, // 最大値 + 2 を設定
+                            title: {
+                                display: false,
+                                text: '投票数'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: false,
+                                text: '項目'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <!-- 隙間 -->
+        <div class="gap-control-probram"></div>
+        <div class="gap-control-probram"></div>
+
+        <!-- 投稿フォーム -->
+
+        <form method="post">
+            <p class="post-title font-style-comments2">キャリアアップで転職をされる際に、重要視されるポイントを下記よりお選びください。<br>※複数選択可能</p>
+            <?php if ($voteCount === 0) : ?>
+                <!-- 隙間 -->
+                <div class="gap-control-probram"></div>
+                <div class="gap-control-probram"></div>
+
+                <div class="flex-posts">
+                    <div class="column">
+                        <input type="checkbox" name="vote[]" value="1" class="flex-post"> 事業内容<br>
+                        <input type="checkbox" name="vote[]" value="2" class="flex-post"> 技術力<br>
+                        <input type="checkbox" name="vote[]" value="3" class="flex-post"> ネームバリュー<br>
+                    </div>
+                    <div class="column">
+                        <input type="checkbox" name="vote[]" value="4" class="flex-post"> 職場環境<br>
+                        <input type="checkbox" name="vote[]" value="5" class="flex-post"> 年収<br>
+                        <input type="checkbox" name="vote[]" value="6" class="flex-post"> 勤務地<br>
+                    </div>
+                    <div class="column">
+                        <input type="checkbox" name="vote[]" value="7" class="flex-post"> 会社の成長<br>
+                        <input type="checkbox" name="vote[]" value="8" class="flex-post"> 福利厚生<br>
+                        <input type="checkbox" name="vote[]" value="9" class="flex-post"> 雰囲気<br>
+                    </div>
+                    <div class="column">
+                        <input type="checkbox" name="vote[]" value="10" class="flex-post"> その他<br>
+                    </div>
+                </div>
+
+                <input class="post-btn" type="submit" value="投票">
+        </form>
+    <?php else : ?>
+        <p class='vote-message'>※既に投票済みです。</p>
+    <?php endif; ?>
+    </div>
 
     <!-- コメント -->
     <div class="container-fluid">
@@ -155,27 +278,24 @@
     <div class="gap-control-probram"></div>
 
     <!-- 写真・コメント -->
-    <div class="wrapper">
-        <section class="case">
-            <article class="case__list">
-              <div class="case__item">
-                <p class="case__item__text">私たちは、技術者派遣に受託及びチーム派遣も含め、<br>企業の社員負担の大幅削減させ、
-            一丸となってソフト<br>ウェア開発業務に専念できるような環境をつくり社会<br>に貢献し続けることを志し、
-            その同志と共に歩んできま<br>した。</p>
-                <img class="case__item__img" src="img/sample1.png" alt="画像1">
-              </div>
-              <div class="case__item">
-                <p class="case__item__text">労働力人口の減少の中で技術者不足は市場全体の課題<br>です。エンジニアが働き続けられる環境の現実を
+    <ul>
+        <li>
+            <p class="txt">私たちは、技術者派遣に受託及びチーム派遣も含め、<br>企業の社員負担の大幅削減させ、
+                一丸となってソフト<br>ウェア開発業務に専念できるような環境をつくり社会<br>に貢献し続けることを志し、
+                その同志と共に歩んできま<br>した。</p>
+            <p class="ptoto"><img src="img/sample1.png" alt=""></p>
+        </li>
+        <div class="gap-control-probram"></div>
+        <div class="gap-control-probram"></div>
+        <li>
+            <p class="txt">労働力人口の減少の中で技術者不足は市場全体の課題<br>です。エンジニアが働き続けられる環境の現実を
                 重要<br>ミッションの一つと捉えています。熟練を求められる<br>技術職種において、20年以上の経験を有するエンジニ<br>アの最重要課題。
                 特にハードウェア分野における豊富<br>な経験を持つエンジニアの活用度が高く、時には技術<br>伝承における重要な役割を担っています。<br><br>
                 ライフイベントを機に職を離れざるを得なかったエン<br>ジニアの、ブランクからの復帰や
                 時短勤務のニーズに<br>応えることで、貴重なスキルを活かしながら生産性高<br>く活躍されています。</p>
-                <img class="case__item__img" src="img/sample2.png" alt="画像2">
-              </div>
-            </article>
-          </section>
-        </div>
-
+            <p class="ptoto"><img src="img/sample2.png" alt=""></p>
+        </li>
+    </ul>
 
     <!-- 隙間 -->
     <div class="gap-control-probram"></div>
@@ -242,7 +362,9 @@
 
 
     <!-- 業務内容（アプリ開発） -->
-    <div><p class="font-bordeaux text-center">分野</p></div>
+    <div>
+        <p class="font-bordeaux text-center">分野</p>
+    </div>
     <div class="cercle">アプリ開発</div>
     <!-- 隙間 -->
     <div class="gap-control-probram"></div>
@@ -275,7 +397,9 @@
     <div class="gap-control-probram"></div>
 
     <!-- 業務内容（インフラエンジニア） -->
-    <div><p class="font-bordeaux text-center">分野</p></div>
+    <div>
+        <p class="font-bordeaux text-center">分野</p>
+    </div>
     <div class="cercle">インフラエンジニア</div>
     <!-- 隙間 -->
     <div class="gap-control-probram"></div>
@@ -306,7 +430,6 @@
     <div class="gap-control-probram"></div>
     <div class="gap-control-probram"></div>
 
-    <div class="wrapper">
     <div class="entry">
         <P class="font-style-comments entry-space">まずはあなたのキャリアプランを聞かせてください。</P>
         <button onclick="location.href='#!'" class="entry-button">　エントリー</button>
@@ -335,12 +458,11 @@
     </div>
     <!-- footer -->
     <footer class="footer">
-    <small>&copy; 1997,2023 mistsolution.All Rights Reserved.</small>
+        <small>&copy; 1997,2023 mistsolution.All Rights Reserved.</small>
     </footer>
     </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="js\header.js"></script>
-<script src="js/upperclassman.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="js/header.js"></script>
 </body>
-</html>  
+
+</html>
