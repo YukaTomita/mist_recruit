@@ -170,7 +170,7 @@ $conn = null;
     </header>
 
     <!-- トップ画像と中央配置 -->
-    <img src="img\グループ 1097.jpg" alt="画像">
+    <img class="top-img" src="img\グループ 1097.jpg" alt="画像">
     <div class="wrapper">
 
         <!-- 隙間 -->
