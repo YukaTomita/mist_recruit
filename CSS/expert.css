@@ -13,7 +13,7 @@
   }
   
   .case__item__text,.case__item__img {
-    width: 50%;
+    width: 100%;
   }
   
   .case__item__text {
@@ -84,4 +84,40 @@
     color: #8B2022;
     font-size: 1.7rem;
     margin: 10px auto;      
+}
+
+/* 質問 */
+.flex-posts {
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    width: 25%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.flex-post {
+    margin-bottom: 10px;
+}
+.post-title {
+    text-align: left;
+    margin-left: 20px;
+}
+.post-btn {
+    /* 枠線を消す */
+    border: none;
+    /* 背景を透明に */
+    background-color: #8B2022;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.vote-message {
+    margin: 40px 0;
 }
