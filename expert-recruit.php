@@ -161,13 +161,13 @@ $conn = null;
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <p class="font-style-words text-center">「キャリアアップで選ぶポイントは何ですか？」</p>
+                <p class="font-style-words2 text-center">「キャリアアップで選ぶポイントは何ですか？」</p>
             </div>
         </div>
     </div>
-
     <!-- エンジニアが選ぶ企業のポイント　ランキング -->
     <div class="wrapper">
+    <p class="title-ranking">エンジニアが選ぶ企業のポイント</p>
         <canvas id="barChart"></canvas>
 
         <script>
@@ -210,6 +210,11 @@ $conn = null;
             });
         </script>
 
+        <!-- 隙間 -->
+        <div class="gap-control-probram"></div>
+        <div class="gap-control-probram"></div>
+
+        <p class="font-style-comments2 txt line-height">キャリアアップで転職される際に、重要視されるポイントを下記よりお選びください。<br>※複数選択可能</p>
         <?php if (!$voteHistory) : ?>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <?php foreach ($options as $option) : ?>
@@ -228,7 +233,7 @@ $conn = null;
     <div class="container-fluid">
         <div class="row">
             <div class="wrapper">
-                <p class="font-style-comments2 txt">皆さんは、転職先を選ぶ時に何を最も重視しますか？
+                <p class="font-style-comments2 txt line-height">皆さんは、転職先を選ぶ時に何を最も重視しますか？
                     たとえば…職場環境、雰囲気、年収、<br>業務内容、技術力、ネームバリューなど、
                     エンジニアに転職をするなら実際自分が使ったことのあ<br>るサービスを
                     開発している企業や、なじみのあるサービスに少しでも携われるのは魅力的だと

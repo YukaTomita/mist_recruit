@@ -136,3 +136,9 @@
     font-weight: bold;
     color: #8B2022;
 }
+.title-ranking {
+    font-size: 1.7rem;
+    line-height: 140%;
+    margin: 20px auto;
+    font-weight: bold;
+}
