@@ -72,6 +72,20 @@
     height: 20px;
   }
 
+/* skill sheet */
+
+table, tr, td{
+  font-size: 1.5rem;
+  border: 1px solid#000;
+}
+
+table{
+  margin: auto;
+  width: 1100px;
+}
+
+
+
 /* 備考欄 */
   textarea{
     width: 700px;
