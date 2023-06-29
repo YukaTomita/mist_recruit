@@ -11,7 +11,7 @@ $conn = new PDO("mysql:host=$host;dbname=$db", $user, $password);
 // タイムゾーンを設定
 date_default_timezone_set('Asia/Tokyo');
 
-// 投票結果のリセット処理 1分間ボタンが押せなくなる
+// 投票結果のリセット処理、1分間ボタンが押せなくなる、指定した時間に開いていないとリセットされない
 if (date('H:i') === '03:00') {
     // 投票数をゼロにリセットするクエリを実行
     $resetQuery = "TRUNCATE TABLE votes";
@@ -209,7 +209,7 @@ $conn = null;
         <?php endif; ?>
 
         <!-- 投票欄 -->
-        <div class="font-style-comments2">
+        <div class="font-style-comments2 line-height">
             <p>「学生時代していた。」もしくは、「個人でしていた。」など、該当するスポーツを下記からお選びください。（※複数されていた方は、一番長く在籍していたスポーツをお選びください。）
             <div class="vote">
                 <?php if ($voteHistory) : ?>
