@@ -1,37 +1,77 @@
 <?php
 // データベース接続情報
 $host = 'localhost';
-$dbname = 'enterprise';
-$username = 'root';
+$db = 'enterprise';
+$user = 'root';
 $password = 'root';
 
-// データベース接続
-try {
-    $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-} catch (PDOException $e) {
-    die('Database connection failed: ' . $e->getMessage());
+// データベースに接続
+$conn = new PDO("mysql:host=$host;dbname=$db", $user, $password);
+
+// オプションの一覧を取得
+$query = "SELECT * FROM options";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$options = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// フォームが送信された場合の処理
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $selectedOptions = isset($_POST['vote']) ? $_POST['vote'] : [];
+
+    // 投票履歴をチェック
+    $userIp = $_SERVER['REMOTE_ADDR'];
+    $query = "SELECT * FROM votes_history WHERE user_ip = :user_ip";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(':user_ip', $userIp);
+    $stmt->execute();
+    $voteHistory = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$voteHistory && count($selectedOptions) > 0) {
+        // 投票結果をデータベースに保存
+        $query = "INSERT INTO votes (option_id) VALUES (:option_id)";
+        $stmt = $conn->prepare($query);
+
+        foreach ($selectedOptions as $option) {
+            $stmt->bindParam(':option_id', $option);
+            $stmt->execute();
+        }
+
+        // 投票履歴を保存
+        $query = "INSERT INTO votes_history (user_ip, option_id) VALUES (:user_ip, :option_id)";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':user_ip', $userIp);
+        $stmt->bindParam(':option_id', $option);
+        $stmt->execute();
+    }
+
+    // ページをリロードして再投稿を防止するためのリダイレクト
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
 }
 
 // 集計クエリ実行
-$query = "SELECT option_name, COUNT(*) AS count FROM votes
-          INNER JOIN options ON votes.option_id = options.id
-          GROUP BY option_name
-          ORDER BY count DESC";
-$stmt = $db->prepare($query);
+$query = "SELECT o.name, COUNT(*) AS count
+FROM options o
+JOIN votes v ON o.id = v.option_id
+GROUP BY o.name
+ORDER BY count DESC;
+";
+$stmt = $conn->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// IPアドレスの取得
-$ipAddress = $_SERVER['REMOTE_ADDR'];
-
-// 同一IPアドレスでの重複投票チェック
-$query = "SELECT COUNT(*) FROM votes WHERE ip_address = :ipAddress";
-$stmt = $db->prepare($query);
-$stmt->bindValue(':ipAddress', $ipAddress);
+// 投票済みかどうかをチェック
+$userIp = $_SERVER['REMOTE_ADDR'];
+$query = "SELECT * FROM votes_history WHERE user_ip = :user_ip";
+$stmt = $conn->prepare($query);
+$stmt->bindParam(':user_ip', $userIp);
 $stmt->execute();
-$voteCount = $stmt->fetchColumn();
+$voteHistory = $stmt->fetch(PDO::FETCH_ASSOC);
 
+// データベース接続のクローズ
+$conn = null;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -136,7 +176,7 @@ $voteCount = $stmt->fetchColumn();
             const data = [];
 
             <?php foreach ($results as $result) : ?>
-                labels.push('<?php echo $result['option_name']; ?>');
+                labels.push('<?php echo $result['name']; ?>');
                 data.push(<?php echo $result['count']; ?>);
             <?php endforeach; ?>
 
@@ -161,14 +201,8 @@ $voteCount = $stmt->fetchColumn();
                             beginAtZero: true,
                             max: Math.max(...data) + 2, // 最大値 + 2 を設定
                             title: {
-                                display: false,
+                                display: true,
                                 text: '投票数'
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: false,
-                                text: '項目'
                             }
                         }
                     }
@@ -176,47 +210,20 @@ $voteCount = $stmt->fetchColumn();
             });
         </script>
 
-        <!-- 隙間 -->
-        <div class="gap-control-probram"></div>
-        <div class="gap-control-probram"></div>
-
-        <!-- 投稿フォーム -->
-
-        <form method="post">
-            <p class="post-title font-style-comments2">キャリアアップで転職をされる際に、重要視されるポイントを下記よりお選びください。<br>※複数選択可能</p>
-            <?php if ($voteCount === 0) : ?>
-                <!-- 隙間 -->
-                <div class="gap-control-probram"></div>
-                <div class="gap-control-probram"></div>
-
-                <div class="flex-posts">
-                    <div class="column">
-                        <input type="checkbox" name="vote[]" value="1" class="flex-post"> 事業内容<br>
-                        <input type="checkbox" name="vote[]" value="2" class="flex-post"> 技術力<br>
-                        <input type="checkbox" name="vote[]" value="3" class="flex-post"> ネームバリュー<br>
+        <?php if (!$voteHistory) : ?>
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <?php foreach ($options as $option) : ?>
+                    <div class="option">
+                        <input type="checkbox" id="option<?php echo $option['id']; ?>" name="vote[]" value="<?php echo $option['id']; ?>">
+                        <label for="option<?php echo $option['id']; ?>"><?php echo $option['name']; ?></label>
                     </div>
-                    <div class="column">
-                        <input type="checkbox" name="vote[]" value="4" class="flex-post"> 職場環境<br>
-                        <input type="checkbox" name="vote[]" value="5" class="flex-post"> 年収<br>
-                        <input type="checkbox" name="vote[]" value="6" class="flex-post"> 勤務地<br>
-                    </div>
-                    <div class="column">
-                        <input type="checkbox" name="vote[]" value="7" class="flex-post"> 会社の成長<br>
-                        <input type="checkbox" name="vote[]" value="8" class="flex-post"> 福利厚生<br>
-                        <input type="checkbox" name="vote[]" value="9" class="flex-post"> 雰囲気<br>
-                    </div>
-                    <div class="column">
-                        <input type="checkbox" name="vote[]" value="10" class="flex-post"> その他<br>
-                    </div>
-                </div>
-
-                <input class="post-btn" type="submit" value="投票">
-        </form>
-    <?php else : ?>
-        <p class='vote-message'>※既に投票済みです。</p>
-    <?php endif; ?>
+                <?php endforeach; ?>
+                <button class="post-btn" type="submit">投票する</button>
+            </form>
+        <?php else : ?>
+            <p class="vote-message asterisk">※すでに投票済みです。</p>
+        <?php endif; ?>
     </div>
-
     <!-- コメント -->
     <div class="container-fluid">
         <div class="row">

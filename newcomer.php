@@ -205,7 +205,7 @@ $conn = null;
                 <?php endforeach; ?>
             </div>
         <?php else : ?>
-            <p class="ranking">投票するとランキングが表示されます。</p>
+            <p class="ranking asterisk">※投票するとランキングが表示されます。</p>
         <?php endif; ?>
 
         <!-- 投票欄 -->
@@ -213,7 +213,7 @@ $conn = null;
             <p>「学生時代していた。」もしくは、「個人でしていた。」など、該当するスポーツを下記からお選びください。（※複数されていた方は、一番長く在籍していたスポーツをお選びください。）
             <div class="vote">
                 <?php if ($voteHistory) : ?>
-                    <p>既に投票済みです。</p>
+                    <p class="asterisk">※既に投票済みです。</p>
                 <?php else : ?>
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <?php foreach ($sports as $sport) : ?>
