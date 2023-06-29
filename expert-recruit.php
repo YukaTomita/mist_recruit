@@ -201,7 +201,7 @@ $conn = null;
                             beginAtZero: true,
                             max: Math.max(...data) + 2, // 最大値 + 2 を設定
                             title: {
-                                display: true,
+                                display: false,
                                 text: '投票数'
                             }
                         }
