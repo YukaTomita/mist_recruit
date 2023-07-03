@@ -5,80 +5,118 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 400px; /* フォームの幅を適宜調整 */
-    margin: 0 auto; /* 水平方向に中央寄せ */
-  }
-  
-  .form-row {
+    width: 400px;
+    /* フォームの幅を適宜調整 */
+    margin: 0 auto;
+    /* 水平方向に中央寄せ */
+}
+
+.form-row {
     display: flex;
     align-items: center;
     margin-left: 250px;
-    margin-bottom: 10px; /* 行間の余白を調整 */
-  }
-  
-  label {
-    width: 100px; /* 項目の幅を適宜調整 */
+    margin-bottom: 10px;
+    /* 行間の余白を調整 */
+}
+
+label {
+    width: 100px;
+    /* 項目の幅を適宜調整 */
     text-align: left;
-    margin-right: 10px; /* 項目と入力欄の間隔を調整 */
-  }
-    
-  .flex-basis1{
+    margin-right: 10px;
+    /* 項目と入力欄の間隔を調整 */
+}
+
+.flex-basis1 {
     width: 400px;
     margin-right: 10px;
-  }
+}
 
-  .flex-basis2{
+.flex-basis2 {
     width: 30px;
-  }
+}
 
-  .flex-basis3{
-    width:450px;
-  }
+.flex-basis3 {
+    width: 450px;
+}
 
-  .radio-item {
+.radio-item {
     display: inline-block;
-    width:130px;
-  }
+    width: 130px;
+}
 
 /* ラジオボタン */
-  input[type="radio"] {
-    width: 16px; /* 幅を適宜調整 */
-    height: 16px; /* 高さを適宜調整 */
-    margin-right: 10px; /* ラジオボタンとラベルの間隔を調整 */
-    -webkit-appearance: none; /* ブラウザのデフォルトスタイルを無効化 */
+input[type="radio"] {
+    width: 16px;
+    /* 幅を適宜調整 */
+    height: 16px;
+    /* 高さを適宜調整 */
+    margin-right: 10px;
+    /* ラジオボタンとラベルの間隔を調整 */
+    -webkit-appearance: none;
+    /* ブラウザのデフォルトスタイルを無効化 */
     -moz-appearance: none;
     appearance: none;
-    border: 1px solid #000; /* ラジオボタンの枠線を追加 */
-    border-radius: 50%; /* 円形にするための丸みを指定 */
-    outline: none; /* フォーカス時のアウトラインを非表示 */
-  }
-  
-  input[type="radio"]:checked {
-    background-color: #000; /* ラジオボタンが選択されたときの背景色を指定 */
-  }
+    border: 1px solid #000;
+    /* ラジオボタンの枠線を追加 */
+    border-radius: 50%;
+    /* 円形にするための丸みを指定 */
+    outline: none;
+    /* フォーカス時のアウトラインを非表示 */
+}
 
-  .input-p{
+input[type="radio"]:checked {
+    background-color: #000;
+    /* ラジオボタンが選択されたときの背景色を指定 */
+}
+
+.input-p {
     font-size: 1.2rem;
-  }
+}
 
-  #input1{
+#input1 {
     width: 300px;
     height: 20px;
     margin-bottom: 10px;
-  }
-  
-  #input-mail{
+}
+
+#input-mail {
     width: 500px;
     height: 20px;
+}
+
+/* skill sheet */
+
+table,
+tr,
+td {
+    font-size: 1.5rem;
+    border: 1px solid#000;
+}
+
+table {
+    margin: auto;
+    width: 1100px;
+}
+/* セル固定 */
+table {
+    table-layout: fixed;
   }
+  
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
 
 /* 備考欄 */
-  textarea{
+textarea {
     width: 700px;
     height: 150px;
     text-align: left;
-  }
-  
+}
+
 /* 個人情報取り扱いスクロール */
 
 .scrolling-box {
@@ -86,41 +124,120 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 600px;
+    width: 700px;
     height: 300px;
-    overflow: hidden; /* 境界線非表示 */
-    border: 1px solid #000; /* 枠の境界線を追加 */
-  }
+    overflow: hidden;
+    /* 境界線非表示 */
+    border: 1px solid #000;
+    /* 枠の境界線を追加 */
+}
 
 .scrolling-content {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    scrollbar-width: none; /* Firefox用 */
-    -ms-overflow-style: none; /* IE, Edge用 */
-  }
+    scrollbar-width: none;
+    /* Firefox用 */
+    -ms-overflow-style: none;
+    /* IE, Edge用 */
+}
 
 .scrolling-content::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera用 */
-  }
+    display: none;
+    /* Chrome, Safari, Opera用 */
+}
 
-  p{
+p {
     text-align: left;
-  }
+    font-size: 14px;
+    line-height: 20px;
+    /*行間開け*/
+}
 
-  .pi-title{
+.pi-title {
     font-size: 2rem;
     font-weight: bolder;
-  }
+}
 
-  .word1{
+.word1 {
     font-size: 1.8rem;
     font-weight: bolder;
-  }
+}
+
 
 /* 保留　備考欄とスタート合わせるためにmargin入れるか確認 */
-  .wrapper {
+.wrapper {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
-  }
+}
+
+
+/* Privacy Mark */
+
+.privacy-mark img {
+    margin-right: auto;
+}
+
+/* アコーディング */
+
+.accordion-item {
+    max-width: 1100px;
+    margin: 10px 10px 10px 200px;
+}
+
+.accordion-header {
+    position: relative;
+    background-color: #bbbbbb;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none;
+}
+
+.accordion-item.active .accordion-header {
+    background-color: #e0e0e0;
+}
+
+.accordion-item.active .accordion-content {
+    display: table-row;
+}
+
+.toggle_btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: translateY(-50%);
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.toggle_btn:before,
+.toggle_btn:after {
+    display: block;
+    content: '';
+    background-color: #000;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle_btn:before {
+    width: 2px;
+    height: 10px;
+}
+
+.accordion-item.active .toggle_btn:before {
+    content: normal;
+}

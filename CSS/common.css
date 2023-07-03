@@ -138,7 +138,10 @@ button {
 a {
     color: #000;
 }
-
+/* 行間 */
+.line-height {
+    line-height: 1.7;
+}
 
 /* ---------------------
 header

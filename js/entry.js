@@ -1,13 +1,38 @@
 // アコーディオンメニューの動作を制御するJavaScript
-var accordions = document.getElementsByClassName("accordion");
-var i;
+document.addEventListener("DOMContentLoaded", function () {
+    var accordionHeaders = document.querySelectorAll(".accordion-header");
 
-for (i = 0; i < accordions.length; i++) {
-  accordions[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
+    accordionHeaders.forEach(function (header) {
+        header.addEventListener("click", function () {
+            var accordionItem = this.parentElement;
+
+            if (accordionItem.classList.contains("active")) {
+                accordionItem.classList.remove("active");
+            } else {
+                accordionItem.classList.add("active");
+            }
+        });
+    });
+});
+
+
+// セルの〇
+function toggleCellState(cell) {
+    var categoryCells = cell.parentNode.cells;
+    var categoryCellIndex = cell.cellIndex;
+    
+    if (categoryCellIndex > 1 && cell.innerHTML === '') {
+        // カテゴリ内のすべてのセルの内容をクリア
+        for (var i = 2; i < categoryCells.length - 1; i++) {
+            var categoryCell = categoryCells[i];
+            if (i !== categoryCellIndex) {
+                categoryCell.innerHTML = '';
+            }
+        }
+        cell.innerHTML = '〇';
+    } else if (categoryCellIndex > 1 && cell.innerHTML !== '') {
+        cell.innerHTML = '';
     }
+}
+
+
