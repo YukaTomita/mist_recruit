@@ -458,7 +458,8 @@ $conn = null;
         <img class="link-img" src="img/グループ 1827.png">
         <img class="link-img" src="img/グループ 1828.png">
     </div>
-    <img class="instagram" src="img/グループ 1098.png" alt="画像">
+    <!--instagram-->
+    <img class="instagram" src="img/インスタ.png" alt="画像">
     <div class="flex-link">
         <img class="silver" src="img/長方形 54.png" alt="画像">
         <img class="silver" src="img/長方形 54.png" alt="画像">

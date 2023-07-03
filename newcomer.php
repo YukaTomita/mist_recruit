@@ -345,7 +345,7 @@ $conn = null;
         </div>
 
         <!-- Instagram -->
-        <img class="instagram" src="img/グループ 1098.png" alt="画像">
+        <img class="instagram" src="img/インスタ.png" alt="画像">
 
         <!-- グレー画像群 -->
         <div class="flex-link">
