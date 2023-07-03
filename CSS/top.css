@@ -1,0 +1,44 @@
+/* 理由WRAP */
+.top-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 幅6等分 */
+    grid-template-rows: 100px 100px 100px; /* 100pxの3行 */
+    grid-gap: 0px; /* 隙間10px */
+    background-color: #F7F7F7;
+}
+
+    .txt1 {    
+        font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #000;
+        font-size: 2.5rem; 
+        margin-top: 10px;  
+    }
+
+    .txt2 {
+        font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #8B2022;
+        font-size: 4rem;  
+        margin-top: 20px; 
+    }
+
+   
+/* 1から数え始める */
+.box1 {
+    margin-top: 30px;
+    grid-column: 2; /* 列開始位置2 */
+    grid-row: 1; /* 行開始位置1 */
+}
+.box2 {
+    margin-left: 10px;
+    grid-column: 3 / 6;
+    grid-row: 1; /* 行開始位置1 */
+}
+.box3 {
+    margin-left: 10px;
+    grid-row: 2;
+    grid-column: 3 / 6;
+}
