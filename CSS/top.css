@@ -114,12 +114,19 @@
     background-color: #F7F7F7;
 }
     .pic_frame {
+        width: 150px;
         display: inline-block;
         text-align: center;
     }
 
         .c-title{
-            
+            margin-top: 10px;
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+        .c-name{
+            margin-top: 10px;
+            font-size: 1.5rem;
         }
 
 .wrap-white{
@@ -137,19 +144,120 @@
     grid-column: 3 / 5;
     grid-row: 1; 
 }
-
 .club-box2{
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
     vertical-align: middle;
     grid-column: 2 / 6;
     grid-row: 2; 
 }
-
 .club-box3{
     margin-top: 30px;
     text-align: center;
     vertical-align: middle;
-    grid-column: 1 / 6;
+    grid-column: 2 / 6;
     grid-row: 3; 
+}
+.club-box4{
+    margin-top: 50px;
+    text-align: left;
+    grid-row: 5;
+    grid-column: 2 / 6;
+}
+.club-box5{
+    margin-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+    grid-column: 2 / 4;
+    grid-row: 3; 
+}
+.club-box6{
+    margin-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+    grid-column: 4 / 6;
+    grid-row: 3; 
+}
+.club-box7{
+    margin-top: 30px;
+    grid-column: 2 / 6;
+    grid-row: 3; 
+}
+
+/* 横並び */
+
+.new-bs-flex {
+    display: flex; /*横並び*/
+  }
+  .new-bs-img {
+    margin: 0;
+    padding: 0;
+  }
+  .new-bs-img img {
+    width: 100%;
+    height: auto;
+  }
+  .new-bs-right {
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+  .new-bs-title {
+    margin-top: 20px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+    color: #8B2022;
+  }
+  .new-bs-text {
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  body {
+    margin: 20px;
+    padding: 0;
+  }
+
+/*プロジェクト参加*/
+  .takeaction-flex {
+    display: flex; /*横並び*/
+  }
+  .takeaction-img {
+    margin: 0;
+    padding: 0;
+  }
+  .takeaction-img img {
+    width: 100%;
+    height: auto;
+  }
+  .takeaction-right {
+    margin: 0;
+    padding: 0;
+  }
+  .takeaction-title {
+    margin-top: 20px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #8B2022;
+  }
+
+/* SNS写真・テキスト */
+ul.sns{
+    display:flex; //画像とテキストを横並びに
+    margin-top:40px;
+}
+    li.sns{
+        display:flex;
+    }
+        .sns-text{
+            text-align: left;
+            width: 500px;
+        }
+
+.previous{
+    font-weight: bold;
+    text-align: left;
 }
