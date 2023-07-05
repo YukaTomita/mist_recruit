@@ -109,6 +109,7 @@ body{
 
 /*中央写真大きさ*/
 .center-img {
+    margin: 0;
     width: 500px;
     height: auto;
 	text-align: center;
@@ -285,7 +286,7 @@ body.noscroll{
 エントリー
 --------------------------- */
 .entry {
-    margin-top: 300px;
+    margin-top: 200px;
 }
 .entry img {
     width: 45%;

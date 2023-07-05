@@ -142,3 +142,72 @@
     margin: 20px auto;
     font-weight: bold;
 }
+
+/* HR-Step */
+.step-content {
+    margin: auto;
+  }
+  
+  .step-inner {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .step{
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 4rem;
+    color: #8B2022;
+  }
+    .step-no{
+        font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+        font-size: 6rem;
+        color: #8B2022;
+    }
+  .step-img{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .step-txt{
+    margin-top: 30px;
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    list-style-position: outside;
+  }
+
+  .step-text {
+    text-align: left;
+    list-style:  none;  /* デフォルトのアイコンを消す */
+    margin:  0;         /* デフォルト指定上書き */
+    padding: 0;         /* デフォルト指定上書き */
+  }
+ 
+ 
+  .step-txt .step-text:before {
+    display:  inline-block;     /* インラインブロックにする */
+    vertical-align: middle;
+    content:  "";     /* 空の要素作成 */
+    width:  20px;               /* 幅指定 */
+    height:  20px;              /* 高さ指定 */
+    background-color: #EEEEEE;  /* 背景色指定 */
+    border-radius:  50%;        /* 要素を丸くする */
+    margin-right: 5px;          /* 余白指定 */
+    margin-bottom: 5px;
+  }
+
+  .triangle {
+    margin-top: 100px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 26px solid #8B2022;
+    border-right: 0;
+  }
+
+  /* Comment container */
+
