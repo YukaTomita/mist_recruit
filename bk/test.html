@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>お問い合わせフォーム</title>
+  <title>アクティブ/非アクティブボタン</title>
   <style>
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 400px; /* フォームの幅を適宜調整 */
-  margin: 0 auto; /* 水平方向に中央寄せ */
-}
-
-.form-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px; /* 行間の余白を調整 */
-}
-
-label {
-  width: 120px; /* 項目の幅を適宜調整 */
-  text-align: right;
-  margin-right: 10px; /* 項目と入力欄の間隔を調整 */
-}
-
-input, textarea {
-  flex: 1; /* 入力欄が残りのスペースを占めるようにする */
-}
-
-button {
-  margin-left: auto; /* 送信ボタンを右寄せ */
-}
+    .active {
+      background-color: green;
+      color: white;
+    }
   </style>
 </head>
 <body>
-  <div class="form-container">
-    <div class="form-row">
-      <label for="name">名前:</label>
-      <input type="text" id="name" name="name">
-    </div>
-    <div class="form-row">
-      <label for="email">メールアドレス:</label>
-      <input type="email" id="email" name="email">
-    </div>
-    <div class="form-row">
-      <label for="message">メッセージ:</label>
-      <textarea id="message" name="message"></textarea>
-    </div>
-    <div class="form-row">
-      <button type="submit">送信</button>
-    </div>
-  </div>
-  </body>
+  <button id="myButton" onclick="toggleActive()">ボタン</button>
+
+  <script>
+    function toggleActive() {
+      var button = document.getElementById("myButton");
+      if (button.classList.contains("active")) {
+        button.classList.remove("active");
+      } else {
+        button.classList.add("active");
+      }
+    }
+  </script>
+</body>
 </html>

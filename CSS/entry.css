@@ -133,6 +133,7 @@ textarea {
 }
 
 .scrolling-content {
+    margin: auto;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -148,6 +149,7 @@ textarea {
 }
 
 p {
+    padding: 5px;
     text-align: left;
     font-size: 14px;
     line-height: 20px;
@@ -172,14 +174,11 @@ p {
     text-align: center;
 }
 
-
-/* Privacy Mark */
-
-.privacy-mark img {
-    margin-right: auto;
-}
-
 /* アコーディング */
+
+.accordion{
+    vertical-align: middle;
+}
 
 .accordion-item {
     max-width: 1100px;
@@ -241,3 +240,68 @@ p {
 .accordion-item.active .toggle_btn:before {
     content: normal;
 }
+
+/* Upload */
+
+.upload{
+    position: relative;
+    margin: auto;
+    width: 350px;
+    height: 110px;
+    line-height: 100px;
+    border-radius: 20px;
+    color: #8B2022;
+    text-align: center;
+    border: 4px solid #8B2022;
+}
+    .upload-txt{
+        text-align: center;
+        margin-top: 25px;
+        font-size: 2rem;
+    }
+.upload-btn{
+    position: absolute;
+    margin-top: 5px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+}
+
+/* 同意するボタン */
+.btn-txt{
+    text-align: left;
+}
+.btn1 {
+    margin: auto;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    color: #8B2022;
+    border: 2px solid #8B2022;
+  }
+
+  button.active {
+    background-color: #8B2022;
+    color: white;
+  }
+
+.btn2 {
+    width: 300px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 30px;
+    background-color: #bbbbbb;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+ button.active {
+    background-color: #8B2022;
+    color: white;
+  }
+
+
+  .privacy-mark{
+    display: inline-block;
+  }

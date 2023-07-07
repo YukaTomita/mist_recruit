@@ -21,17 +21,16 @@
     <meta name="twitter:card" content="summary" />
     <!-- 各々変更 -->
     <title>エントリー</title>
-<<<<<<< HEAD
-=======
-
->>>>>>> e43ebf6b604dd441f3e55e4592279770920b101f
     <!-- css,js -->
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/entry.css" type="text/css">
     <script type="text/javascript" src="js/common.js"></script>
+    <!-- jQuery -->
+
     <!-- favicon -->
     <link rel="icon" href="img/favicon.ico">
+    
 </head>
 
 <body>
@@ -83,12 +82,8 @@
     </div>
 
 
-<<<<<<< HEAD
 <!--入力項目-->
 <form action="entry.php" method="POST">
-=======
-    <div class="gap-control-probram"></div>
->>>>>>> e43ebf6b604dd441f3e55e4592279770920b101f
 
     <div class="container-fluid">
         <div class="row">
@@ -106,11 +101,6 @@
     <div class="gap-control-probram"></div>
     <div class="gap-control-probram"></div>
 
-
-<div class="form-row">
-  <label>備考欄</label>
-  <textarea></textarea>
-</div>
     <!--入力項目-->
     <form action="submit.php" method="POST">
 
@@ -222,15 +212,17 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <table>
-                        <tr height="34">
-                            <td height="34" class="xl65" width="100">スキル内容</td>
-                            <td class="xl65" width="100">言語</td>
+                        <tr height="34" style="text-align: center;">
+                            <td height="34" class="xl65" width="150">スキル内容</td>
+                            <td class="xl65" width="150">言語</td>
                             <td class="xl70" width="30">5</td>
                             <td class="xl70" width="30">4</td>
                             <td class="xl70" width="30">3</td>
                             <td class="xl70" width="30">2</td>
                             <td class="xl70" width="30">1</td>
-                            <td class="xl70" width="250">年数</td>
+                            <td class="xl70" width="50">１年未満</td>
+                            <td class="xl70" width="50">１～３年</td>
+                            <td class="xl70" width="50">3年以上</td>
                             <td class="xl65" width="300">※経験分野の該当スキルに〇を記入してください。</td>
                         </tr>
                     </table>
@@ -238,14 +230,16 @@
                     <div class="accordion-content">
                         <table>
                             <tr style="border: none;" height="34">
-                                <td height="34" class="xl65" width="100">（OP系）</td>
-                                <td class="xl65" width="100">・C</td>
+                                <td height="34" class="xl65" width="150">（OP系）</td>
+                                <td class="xl65" width="150">・C</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
                                 <td style="border:none;" height="34" rowspan="36" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：未経験、経験薄だが知識あり※独学<br>レベル２：経験あり、指導の下での対応可<br>レベル３：経験あり、指導なしでの対応可<br>レベル４：十分な経験あり、設計業務可能<br>レベル５：精通している、SE及びPGに指導可
                                 </td>
@@ -258,7 +252,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -268,7 +264,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -278,7 +276,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65">（WEB系）</td>
@@ -288,7 +288,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -298,7 +300,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -308,7 +312,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -318,7 +324,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -328,7 +336,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -338,7 +348,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（汎用機系）</td>
@@ -348,7 +360,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -358,7 +372,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -368,7 +384,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（DB系）</td>
@@ -378,7 +396,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -388,7 +408,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -398,7 +420,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（シェル）</td>
@@ -408,7 +432,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -418,7 +444,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -428,7 +456,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（その他）</td>
@@ -438,7 +468,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -448,7 +480,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl68">上記以外</td>
@@ -458,7 +492,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -469,14 +505,16 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100">（プラットフォーム・言語）</td>
-                                <td class="xl66" width="100">・J2EE</td>
+                                <td height="34" class="xl65" width="150">（プラットフォーム・言語）</td>
+                                <td class="xl66" width="150">・J2EE</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
                                 <td style="border:none;" height="34" rowspan="36" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：未経験、経験薄だが知識あり※独学<br>レベル２：経験あり、指導の下での対応可<br>レベル３：経験あり、指導なしでの対応可<br>レベル４：十分な経験あり、設計業務可能<br>レベル５：精通している、SE及びPGに指導可
                                 </td>
@@ -489,7 +527,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -499,7 +539,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -509,7 +551,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -519,7 +563,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -529,7 +575,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -539,7 +587,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -549,7 +599,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -559,7 +611,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（フレームワーク・言語）</td>
@@ -569,7 +623,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -579,7 +635,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -589,7 +647,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -600,14 +660,16 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100"></td>
-                                <td class="xl67" width="100">・DB2</td>
+                                <td height="34" class="xl65" width="150"></td>
+                                <td class="xl67" width="150">・DB2</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
                                 <td rowspan="5" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：チューニング<br>レベル２：DBテーブル設計<br>レベル３：物理設計<br>レベル４：論理設計<br>レベル５：**********
                                 </td>
@@ -620,7 +682,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -630,7 +694,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -640,7 +706,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -651,14 +719,16 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100">（汎用・クライアント）</td>
-                                <td class="xl66" width="100">・z/OS</td>
+                                <td height="34" class="xl65" width="150">（汎用・クライアント）</td>
+                                <td class="xl66" width="150">・z/OS</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
                                 <td rowspan="10" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：運用・監視・サポート経験あり<br>レベル２：コマンド操作可<br>レベル３：インストール<br>レベル４：構築可<br>レベル５：設計可
                                 </td>
@@ -671,7 +741,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -681,7 +753,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -691,7 +765,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（サーバー）</td>
@@ -701,7 +777,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -711,7 +789,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -721,7 +801,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -731,7 +813,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -741,7 +825,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -752,14 +838,16 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100">（windowsサーバー）</td>
-                                <td class="xl66" width="100">・レジストリの操作・編集</td>
+                                <td height="34" class="xl65" width="150">（windowsサーバー）</td>
+                                <td class="xl66" width="150">・レジストリの操作・編集</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
                                 <td rowspan="44" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：未経験、経験薄だが知識あり※独学<br>レベル２：経験あり、指導の下での対応可<br>レベル３：経験あり、指導なしでの対応可<br>レベル４：十分な経験あり、設計業務可能<br>レベル５：精通している、SE及びPGに指導可
                                 </td>
@@ -772,7 +860,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（UNIXサーバー）</td>
@@ -782,7 +872,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -792,7 +884,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（監視・運用・障害対応）</td>
@@ -802,7 +896,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -812,15 +908,17 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100">（設計・構築）</td>
-                                <td class="xl66" width="100">・NW導入提案</td>
+                                <td height="34" class="xl65" width="150">（設計・構築）</td>
+                                <td class="xl66" width="150">・NW導入提案</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
-                                <td rowspan="5" class="xl71" width="300">
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td rowspan="21" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：チューニング<br>レベル２：DBテーブル設計<br>レベル３：物理設計<br>レベル４：論理設計<br>レベル５：**********
                                 </td>
                             </tr>
@@ -832,7 +930,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -842,7 +942,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -852,7 +954,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -862,7 +966,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -872,7 +978,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -882,7 +990,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -892,7 +1002,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -902,7 +1014,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -912,7 +1026,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -922,7 +1038,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -932,7 +1050,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（運用・保守）</td>
@@ -942,7 +1062,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -952,7 +1074,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（セキュリティー）</td>
@@ -962,7 +1086,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl66">（ツール・NW機器）</td>
@@ -972,7 +1098,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -982,7 +1110,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -992,7 +1122,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1002,7 +1134,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1012,7 +1146,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1022,7 +1158,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -1032,14 +1170,16 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100"></td>
-                                <td class="xl65" width="100">・Vmware</td>
+                                <td height="34" class="xl65" width="150"></td>
+                                <td class="xl65" width="150">・Vmware</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
                                 <td rowspan="5" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：チューニング<br>レベル２：DBテーブル設計<br>レベル３：物理設計<br>レベル４：論理設計<br>レベル５：**********
                                 </td>
@@ -1052,7 +1192,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1062,7 +1204,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1072,7 +1216,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1082,7 +1228,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -1093,15 +1241,17 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100"></td>
-                                <td class="xl68" width="100">・Apache2</td>
+                                <td height="34" class="xl65" width="150"></td>
+                                <td class="xl68" width="150">・Apache2</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
-                                <td rowspan="5" class="xl71" width="300">
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td rowspan="9" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：チューニング<br>レベル２：DBテーブル設計<br>レベル３：物理設計<br>レベル４：論理設計<br>レベル５：**********
                                 </td>
                             </tr>
@@ -1113,7 +1263,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1123,7 +1275,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1133,7 +1287,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1143,7 +1299,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1153,7 +1311,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1163,7 +1323,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1173,7 +1335,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1183,7 +1347,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -1194,14 +1360,16 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100"></td>
-                                <td class="xl68" width="100">・銀行</td>
+                                <td height="34" class="xl65" width="150"></td>
+                                <td class="xl68" width="150">・銀行</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
                                 <td rowspan="23" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：保守/運用<br>レベル２：製造/単体テスト<br>レベル３：詳細設計/内部設計<br>レベル４：基本設計/概要設計<br>レベル５：調査分析/要件定義
                                 </td>
@@ -1214,7 +1382,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1224,7 +1394,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1234,7 +1406,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1244,7 +1418,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1254,7 +1430,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1264,7 +1442,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1274,7 +1454,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1284,7 +1466,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1294,7 +1478,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -1304,15 +1490,17 @@
                     <div class="accordion-content">
                         <table>
                             <tr height="34">
-                                <td height="34" class="xl65" width="100"></td>
-                                <td class="xl68" width="100">・融資</td>
+                                <td height="34" class="xl65" width="150"></td>
+                                <td class="xl68" width="150">・融資</td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
                                 <td onclick="toggleCellState(this)" class="xl65" width="30"></td>
-                                <td onclick="toggleCellState(this)" class="xl65" width="250">１年未満　１以上～３年　3年以上</td>
-                                <td rowspan="5" class="xl71" width="300">
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td onclick="toggleCellState(this)" class="xl65" width="50"></td>
+                                <td rowspan="11" class="xl71" width="300">
                                     未記入：未経験、知識なし<br>レベル１：チューニング<br>レベル２：DBテーブル設計<br>レベル３：物理設計<br>レベル４：論理設計<br>レベル５：**********
                                 </td>
                             </tr>
@@ -1324,7 +1512,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1334,7 +1524,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1344,7 +1536,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1354,7 +1548,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1364,7 +1560,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1374,7 +1572,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1384,7 +1584,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1394,7 +1596,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1404,7 +1608,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                             <tr height="34">
                                 <td height="34" class="xl65"></td>
@@ -1414,7 +1620,9 @@
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
                                 <td onclick="toggleCellState(this)" class="xl65"></td>
-                                <td class="xl65">１年未満　１以上～３年　3年以上</td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
+                                <td onclick="toggleCellState(this)" class="xl65"></td>
                             </tr>
                         </table>
                     </div>
@@ -1438,7 +1646,16 @@
 
     <!-- 履歴書等アップロード -->
 
+    <div class="upload">
+        <p class="upload-txt">履歴書/職務経歴書</p>
+        <div class="upload-btn">
+            <a href="#!"><img src="img/upload.png"></a>
+        </div>
+    </div>
 
+    <div class="gap-control-probram"></div>
+    <div class="gap-control-probram"></div>
+    <div class="gap-control-probram"></div>
 
     <!--個人情報取扱-->
     <div class="wrapper">
@@ -1500,37 +1717,48 @@
     </div>
 
     <div class="gap-control-probram"></div>
+    <div class="gap-control-probram"></div>
 
     <!-- 同意する -->
-    <div>上記取扱に</div>
-
-    <div class="gap-control-probram"></div>
-
-    <!-- 同意するボタン　押したら色変わる -->
-    <form>
-        <div>
-            <input type="checkbox" id="agree" />
-            <label for="agree">同意する</label>
-        </div>
-        <button type="submit" class="submit-btn" id="submit-btn" disabled>送信する</button>
-    </form>
-    </div>
-    </div>
-    </div>
-
+<div class="wrapper">
+    <div class="btn-txt">上記の個人情報の取り扱いに</div>
     <div class="gap-control-probram"></div>
     <div class="gap-control-probram"></div>
-
-
-    <div>本フォームから送信できない場合　またはお急ぎの場合は、下記の電話番号にお問い合わせください。<br>
+    <div class="gap-control-probram"></div>
+    <button id="myButton" class="btn1" onclick="toggleActive()">同意する</button>
+    <script>
+      function toggleActive() {
+        var button = document.getElementById("myButton");
+        if (button.classList.contains("active")) {
+          button.classList.remove("active");
+        } else {
+          button.classList.add("active");
+        }
+      }
+    </script>
+    <div class="gap-control-probram"></div>
+    <div class="gap-control-probram"></div>
+    <div class="gap-control-probram"></div>
+    <div class="btn-txt">本フォームから送信できない場合<br>またはお急ぎの場合は、下記の電話番号にお問い合わせください。<br><br>
         電話：03-3526-7271（平日10：00～18：00）</div>
-
     <div class="gap-control-probram"></div>
     <div class="gap-control-probram"></div>
+    <button id="otherButton" class="btn2" onclick="toggleActive(document.getElementById('myButton'))">エントリー</button>    
+    <script>
+        function toggleActive() {
+        var button = document.getElementById("myButton");
+        if (button.classList.contains("active")) {
+          button.classList.remove("active");
+        } else {
+          button.classList.add("active");
+        }
+        }
+    </script>   
+</div> 
 
-    <!-- プライバシーマーク -->
-
+    <!--プライバシーマーク-->    
     <img class="privacy-mark" src="img/privacy.png">
+
 
     <div class="gap-control-probram"></div>
     <div class="gap-control-probram"></div>
@@ -1539,17 +1767,11 @@
     <!-- エントリーボタン　個人情報にチェックされたらアクティブ -->
 
 
-<<<<<<< HEAD
 
 </form>
 <!-- footer -->
   <footer class="footer">
     <small>&copy; 1997,2023 mistsolution.All Rights Reserved.</small>
-=======
-    <!-- footer -->
-    <footer class="footer">
-        <small>&copy; 1997,2023 mistsolution.All Rights Reserved.</small>
->>>>>>> e43ebf6b604dd441f3e55e4592279770920b101f
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>

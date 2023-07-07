@@ -209,5 +209,45 @@
     border-right: 0;
   }
 
-  /* Comment container */
+  /* Comment wrap */
 
+.comment-wrap{
+    width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 150px 150px 150px; 
+    grid-gap: 0px;
+}
+    .comment-box1{
+        line-height: 3rem;
+        margin-top: 20px;
+        text-align: left;
+        grid-column: 1;
+        grid-row: 1 / 2;    
+    }
+    .comment-box2{
+        line-height: 2.5rem;
+        padding-right: 30px;
+        margin-top: 20px;
+        text-align: left;
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;    
+    }
+    .comment-txt{
+        padding-left: 40px;
+        border-left: 1px solid;
+    }
+    .comment-box3{
+        line-height: 3rem;
+        padding-right: 30px;
+        margin-top: 20px;
+        text-align: left;
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;    
+    }
+    .comment-box4{
+        padding-left: 80px;
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;    
+    }
