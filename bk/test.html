@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>アクティブ/非アクティブボタン</title>
-  <style>
-    .active {
-      background-color: green;
-      color: white;
-    }
-  </style>
+  <title>slide test</title>
+  <link rel="stylesheet" href="css/top.css" type="text/css">
 </head>
 <body>
-  <button id="myButton" onclick="toggleActive()">ボタン</button>
-
-  <script>
-    function toggleActive() {
-      var button = document.getElementById("myButton");
-      if (button.classList.contains("active")) {
-        button.classList.remove("active");
-      } else {
-        button.classList.add("active");
-      }
-    }
-  </script>
-</body>
+  <div class="slide">
+    <img class="item" src="https://cdn.pixabay.com/photo/2022/11/02/08/41/hawkweed-7564327_960_720.jpg" alt="">
+    <img class="item" src="https://cdn.pixabay.com/photo/2023/01/14/10/18/buildings-7717853_960_720.jpg" alt="">
+    <img class="item" src="https://cdn.pixabay.com/photo/2023/01/07/07/16/houses-7702757_960_720.jpg" alt="">
+    </div></body>
 </html>

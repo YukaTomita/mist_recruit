@@ -1,3 +1,98 @@
+/* Top-slide */
+.slideshow {
+  margin-top: 90px;
+  position: relative;
+  width: 100%;
+  height: 650px; /* スライドショーの高さを調整 */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide .caption1 {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 5rem;
+  writing-mode: vertical-rl;
+  line-height: 10rem;
+}
+.slide .caption2 {
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 5rem;
+  writing-mode: vertical-rl;
+  line-height: 10rem;
+}
+.slide .caption3 {
+  height: 400px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 5rem;
+  writing-mode: vertical-rl;
+  line-height: 10rem;
+}
+
+
+.slide:first-child {
+  opacity: 1;
+}
+
+.slide a.button {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 20px;
+  font-size: 2rem;
+  color: #FFFFFF;
+  background-color: #8B2022;
+  text-decoration: none;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
 /* 理由 */
 .font-style-choose{
     font-size: 5rem;
@@ -63,6 +158,65 @@
   width: 100%;
   height: auto;
 }
+  .reason-img{
+    position: relative;
+  }
+  .reason-p{
+    margin-left: -2.5rem;
+    line-height: 3rem;
+  }
+  .reason-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    color: #8B2022;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+  .reason-ul {
+    list-style-type: none;
+  }
+  .reason-li {
+    position: relative;
+    line-height: 1.8;
+  }
+  .reason-li::before{
+    content: "";
+    position: absolute;
+    top: .2em;
+    left: -1.7em;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #8B2022;
+    border-radius: 2px;
+  }
+  .reason-li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1.5em;
+    top: .5em;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #8B2022;
+    border-bottom: 2px solid #8B2022;
+    transform: rotate(-45deg);
+  }
+  .reason-txt2{
+    position: absolute;
+    width:500px;
+    height: 100px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Helvetica,"游ゴシック体", 'YuGothic', "游ゴシック", "Yu Gothic", sans-serif;
+    color: #8B2022;
+    font-weight: bold;
+    line-height: 3rem;
+
+  }
 .top-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 幅6等分 */
@@ -389,3 +543,22 @@
     font-size: 2rem; /* テキストのフォントサイズ */
   }
   
+/* Youtube */
+.youtube-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width:1240px;
+  margin: 0px auto;
+}
+
+.youtube-child {
+  text-align: center;
+  width: 400px;
+}
+
+.youtube-child > iframe {
+  width: 320px;
+  height: 180px;
+}

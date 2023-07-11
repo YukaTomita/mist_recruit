@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/top.css" type="text/css">
-    <script type="text/javascript" src="js/common.js"></script>
 </head>
 <body>
 
@@ -57,24 +56,53 @@
     <span class="burger-musk"></span>
 </header>
 
-<!-- トップ動画 or 画像 -->
+<!-- トップスライド画像 -->
+<div class="slideshow">
+    <div class="slide">
+      <img src="img/top-slide1.png" alt="Image 1">
+      <div class="caption1">今も、未来も<br>社会を支える<br>エンジニアに</div>
+      <a href="!#" class="button"><p>積極的に面談中、エントリーはこちら　＞</p></a>
+    </div>
+    <div class="slide">
+      <img src="img/top-slide2.png" alt="Image 2">
+      <div class="caption2">志は皆同じ<br>だから頑張れる</div>
+      <a href="!#" class="button"><p>積極的に面談中、エントリーはこちら　＞</p></a>
+    </div>
+    <div class="slide">
+      <img src="img/top-slide3.png" alt="Image 3">
+      <div class="caption3">始めたばかりで<br>日々奮闘している<br>エンジニアも</div>
+      <a href="!#" class="button"><p>積極的に面談中、エントリーはこちら　＞</p></a>
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+  <script>
+    var slides = document.getElementsByClassName("slide");
+    var currentSlide = 0;
 
-<!-- 写真スライド -->
+    function showSlide(n) {
+    slides[currentSlide].style.opacity = 0;
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].style.opacity = 1;
+    }
 
-<!-- 隙間 -->
+    function changeSlide(n) {
+    showSlide(currentSlide + n);
+    }
+
+    // 10秒ごとにスライドを切り替える
+    setInterval(function() {
+    changeSlide(1);
+    }, 10000);
+  </script>
+    
+
 <div class="gap-control-probram"></div>
 <div class="gap-control-probram"></div>
 <div class="gap-control-probram"></div>
 <div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<div class="gap-control-probram"></div>
-<!-- コメント -->
+
+ <!-- コメント -->
 <div>
     <p class="font-style-title text-center">私たちについて</p>
     <hr class="border-line">
@@ -172,7 +200,17 @@
             理由1～5
 ------------------------------------>
 <!-- 理由１ -->
-<img src="img/TOP1.png" class="wrap-img">
+<div class="reason-img">
+    <img src="img/TOP1.png" class="wrap-img">
+    <div class="reason-txt">
+        <p class="reason-p">こんな悩みをお持ちではありませんか？</p>
+        <ul class="reson-ul">
+            <li class="reason-li">これまで培ったスキルを新たな環境で試したい。</li>
+            <li class="reason-li">次なるチャンスを掴みたい。</li>
+            <li class="reason-li">収入をUPさせたい。</li>
+        </ul>
+    </div>
+</div>
 <div class="top-wrap">
     <div class="box1">
         <div class="font-style-choose">理由<span class="wide-num">1</span></div>
@@ -199,7 +237,14 @@
 <div class="gap-control-probram"></div>
 
 <!-- 理由２ -->
-<img src="img/TOP2.png" class="wrap-img">
+<div class="reason-img">
+    <img src="img/TOP2.png" class="wrap-img">
+    <div class="reason-txt2">
+        高い授業料金を支払ってプログラミング用語を学ぶ時代から、対価を得ながら現場で使える最新の技術を学んでいく時代へと
+        移行している背景には、変化が大きい現代のIT社会に対応できる、若い技術者のスピード感を求めてきています。
+        そんな時代にSES（システム・エンジニアリング・サービス）が更に必要とされています。
+    </div>
+</div>
 <div class="top-wrap">
     <div class="box1">
         <div class="font-style-choose">理由<span class="wide-num">2</span></div>
@@ -226,7 +271,19 @@
 <div class="gap-control-probram"></div>
 
 <!-- 理由３ -->
-<img src="img/TOP3.png" class="wrap-img">
+<div class="reason-img">
+    <img src="img/TOP3.png" class="wrap-img">
+    <div class="reason-txt">
+        <ul class="reson-ul">
+            <li class="reason-li">社会に必要とされる。</li>
+            <li class="reason-li">日々技術が身につく。</li>
+            <li class="reason-li">続ければ続けるほどスキルが上がる。</li>
+            <li class="reason-li">今まで以上に社会から必要とされる。</li>
+            <li class="reason-li">給与も上がる。</li>
+        </ul>
+        <p class="reason-p">これ、正しいサイクルだと思います。</p>
+    </div>
+</div>
 <div class="top-wrap">
     <div class="box1">
         <div class="font-style-choose">理由<span class="wide-num">3</span></div>
@@ -253,7 +310,17 @@
 <div class="gap-control-probram"></div>
 
 <!-- 理由４ -->
-<img src="img/TOP4.png" class="wrap-img">
+<div class="reason-img">
+    <img src="img/TOP4.png" class="wrap-img">
+    <div class="reason-txt">
+        <p class="reason-p">予測困難な社会情勢に私たちも変化を求められてきています。
+            人事・営業・直属の上司とフェーズに合わせた部署との連携を取りながら柔軟な対応を行っています。
+            テクノロジーと人間力！の融合性が当社のサポート体制の強みです。リモート業務が増える中で
+            サポート体制は必然であり企業に所属する意義が強まります。
+            また、同じ志をもった仲間も集い日々の活力にも繋がります。
+        </p>
+    </div>
+</div>
 <div class="top-wrap">
     <div class="box1">
         <div class="font-style-choose">理由<span class="wide-num">4</span></div>
@@ -280,7 +347,14 @@
 <div class="gap-control-probram"></div>
 
 <!-- 理由５ -->
-<img src="img/TOP5.png" class="wrap-img">
+<div class="reason-img">
+    <img src="img/TOP5.png" class="wrap-img">
+    <div class="reason-txt2">
+        見込み残業が応募要項に多く見られるようになり慢性化していませんか？
+        当社では、一人一人の対価に対し正当な評価に繋がるよ努めています。
+        だから、社員の個性が輝き最終的には会社への貢献へと繋がり双方にとって高みを目指せる環境になっています。
+    </div>
+</div>
 <div class="top-wrap">
     <div class="box1">
         <div class="font-style-choose">理由<span class="wide-num">5</span></div>
@@ -507,6 +581,20 @@
 <!--------------------------------
         お知らせ ※要変更(php)
 --------------------------------->
+<div>
+    <p class="font-style-title text-center">お知らせ</p>
+    <hr class="border-line">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <p class="font-style-words text-center">What's New</p>
+        </div>
+    </div>
+</div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
 <div class="news-banner">
     <div class="news-circle"></div>
     <span class="news-date">2023/07/05</span>
@@ -522,6 +610,47 @@
     <span class="news-date">2023/07/05</span>
     <p class="news-text">テキストの例</p>
 </div>
+
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+
+<!-- YouTube -->
+<div>
+    <p class="font-style-title text-center">動画配信</p>
+    <hr class="border-line">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <p class="font-style-words text-center">YouTube</p>
+        </div>
+    </div>
+</div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+
+<div class="youtube-container">
+	<div class="child">
+        <iframe src="https://www.youtube.com/embed/?list=UUQfpU3SXPks2dzJVW6fFsLw"></iframe>
+	</div>
+	<div class="child">
+        <iframe src="https://www.youtube.com/embed/?list=UUQfpU3SXPks2dzJVW6fFsLw"></iframe>
+	</div>
+    <div class="child">
+        <iframe src="https://www.youtube.com/embed/?list=UUQfpU3SXPks2dzJVW6fFsLw"></iframe>
+	</div>
+	<div class="child">
+        <iframe src="https://www.youtube.com/embed/?list=UUQfpU3SXPks2dzJVW6fFsLw"></iframe>
+	</div>
+</div>
+
+
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+
 
 <!--エントリー-->
 <div class="wrapper">
