@@ -76,7 +76,8 @@ body{
     font-weight: 500;
     font-style: normal;
     color: #000;
-    font-size: 1.5rem;   
+    font-size: 1.5rem;  
+    line-height: 2.5rem; 
 }
 
 /*短ライン*/
@@ -109,6 +110,7 @@ body{
 
 /*中央写真大きさ*/
 .center-img {
+    margin: 0;
     width: 500px;
     height: auto;
 	text-align: center;
@@ -285,7 +287,7 @@ body.noscroll{
 エントリー
 --------------------------- */
 .entry {
-    margin-top: 400px;
+    margin-top: 200px;
 }
 .entry img {
     width: 45%;

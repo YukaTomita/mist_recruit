@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>slide test</title>
-  <link rel="stylesheet" href="css/top.css" type="text/css">
+    <title>最新のYouTube動画</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        // YouTubeのAPIを読み込んだ後に実行するコールバック関数
+        function onYouTubeIframeAPIReady() {
+            // 最新のYouTube動画情報を取得するAPIエンドポイントにリクエストを送信する（例えば、Flaskのルートエンドポイントなど）
+            fetch('/latest_youtube_videos')
+                .then(response => response.json())
+                .then(data => {
+                    // 取得した動画情報をもとにプレーヤーを作成する
+                    data.forEach((video, index) => {
+                        const playerId = `player${index + 1}`;
+                        const playerContainer = document.getElementById(playerId);
+                        createYouTubePlayer(video.videoId, playerId);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // 動画プレーヤーを作成する関数
+        function createYouTubePlayer(videoId, playerId) {
+            new YT.Player(playerId, {
+                height: '360',
+                width: '640',
+                videoId: videoId,
+            });
+        }
+    </script>
 </head>
 <body>
-  <div class="slide">
-    <img class="item" src="https://cdn.pixabay.com/photo/2022/11/02/08/41/hawkweed-7564327_960_720.jpg" alt="">
-    <img class="item" src="https://cdn.pixabay.com/photo/2023/01/14/10/18/buildings-7717853_960_720.jpg" alt="">
-    <img class="item" src="https://cdn.pixabay.com/photo/2023/01/07/07/16/houses-7702757_960_720.jpg" alt="">
-    </div></body>
+    <h1>最新のYouTube動画</h1>
+    
+    <div id="player1"></div>
+    <div id="player2"></div>
+    <div id="player3"></div>
+    <div id="player4"></div>
+    
+    <script>
+        // YouTubeの埋め込みAPIを非同期に読み込む
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+</body>
 </html>

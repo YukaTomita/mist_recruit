@@ -96,8 +96,6 @@ $conn = null;
     <meta name="twitter:card" content="summary" />
     <!-- 各々変更 -->
     <title>ベテラン向け</title>
-    <!-- jQuery -->
-
     <!-- css,js -->
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/common.css" type="text/css">
@@ -109,9 +107,7 @@ $conn = null;
     <link rel="icon" href="img/favicon.ico">
 
 </head>
-
 <body>
-
     <!-- header -->
     <header class="header flex-box">
         <h1 class="site-title">
@@ -119,7 +115,6 @@ $conn = null;
                 <img src="img/グループ 1315.png" alt="ロゴ">
             </a>
         </h1>
-        <a href="#!"><img class="header-instagram" src="img/グループ 790.png" alt="Instagram"></a>
         <a href="#!"><img class="header-twitter" src="img/white background.png" alt="Twitter"></a>
         <a href="#!" class="header-entry">エントリー</a>
         <nav class="header-nav">
@@ -458,20 +453,13 @@ $conn = null;
         <img class="link-img" src="img/グループ 1827.png">
         <img class="link-img" src="img/グループ 1828.png">
     </div>
-    <!--instagram-->
-    <img class="instagram" src="img/インスタ.png" alt="画像">
-    <div class="flex-link">
-        <img class="silver" src="img/長方形 54.png" alt="画像">
-        <img class="silver" src="img/長方形 54.png" alt="画像">
-        <img class="silver" src="img/長方形 54.png" alt="画像">
-    </div>
-    <div class="flex-link">
-        <img class="silver" src="img/長方形 54.png" alt="画像">
-        <img class="silver" src="img/長方形 54.png" alt="画像">
-        <img class="silver" src="img/長方形 54.png" alt="画像">
-    </div>
-    <p class="look">もっと見る</p>
-    </div>
+    
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+<div class="gap-control-probram"></div>
+
     <!-- footer -->
     <footer class="footer">
         <small>&copy; 1997,2023 mistsolution.All Rights Reserved.</small>
@@ -480,5 +468,4 @@ $conn = null;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
 </body>
-
 </html>
