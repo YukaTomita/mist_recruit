@@ -15,24 +15,60 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//レベルの〇をつける
+function toggleCheckmark(element) {
+    var isSelected = element.classList.contains("selected");
 
-// セルの〇
-function toggleCellState(cell) {
-    var categoryCells = cell.parentNode.cells;
-    var categoryCellIndex = cell.cellIndex;
-    
-    if (categoryCellIndex > 1 && cell.innerHTML === '') {
-        // カテゴリ内のすべてのセルの内容をクリア
-        for (var i = 2; i < categoryCells.length - 1; i++) {
-            var categoryCell = categoryCells[i];
-            if (i !== categoryCellIndex) {
-                categoryCell.innerHTML = '';
+    // すでに選択されている場合は「〇」を削除する
+    if (isSelected) {
+        element.innerHTML = "";
+        element.classList.remove("selected");
+    } else {
+        var selectedCells = document.getElementsByClassName("selected");
+
+        // 同じ行の他のセルが選択されている場合は選択を解除する
+        for (var i = 0; i < selectedCells.length; i++) {
+            var selectedCell = selectedCells[i];
+            if (selectedCell.parentNode === element.parentNode) {
+                selectedCell.innerHTML = "";
+                selectedCell.classList.remove("selected");
             }
         }
-        cell.innerHTML = '〇';
-    } else if (categoryCellIndex > 1 && cell.innerHTML !== '') {
-        cell.innerHTML = '';
+
+        // 選択されたセルに〇を追加する
+        element.innerHTML = "〇";
+        element.classList.add("selected");
     }
 }
+
+
+// radio button on/off
+const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+const clearRadioButton = (radioButton) => {
+  setTimeout(func =()=>{
+    radioButton.checked = false;
+  },100)
+}
+
+radioButtons.forEach(radioButton => {
+  let queryStr = 'label[for="' + radioButton.id + '"]'
+  let label = document.querySelector(queryStr)
+
+  radioButton.addEventListener("mouseup", func=()=>{
+    if(radioButton.checked){
+      clearRadioButton(radioButton)
+    }
+  });
+
+  if(label){
+    label.addEventListener("mouseup", func=()=>{
+      if(radioButton.checked){
+        clearRadioButton(radioButton)
+      }
+    });
+  }
+});
+
 
 

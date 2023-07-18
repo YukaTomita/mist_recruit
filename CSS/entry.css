@@ -45,31 +45,6 @@ label {
     width: 130px;
 }
 
-/* ラジオボタン */
-input[type="radio"] {
-    width: 16px;
-    /* 幅を適宜調整 */
-    height: 16px;
-    /* 高さを適宜調整 */
-    margin-right: 10px;
-    /* ラジオボタンとラベルの間隔を調整 */
-    -webkit-appearance: none;
-    /* ブラウザのデフォルトスタイルを無効化 */
-    -moz-appearance: none;
-    appearance: none;
-    border: 1px solid #000;
-    /* ラジオボタンの枠線を追加 */
-    border-radius: 50%;
-    /* 円形にするための丸みを指定 */
-    outline: none;
-    /* フォーカス時のアウトラインを非表示 */
-}
-
-input[type="radio"]:checked {
-    background-color: #000;
-    /* ラジオボタンが選択されたときの背景色を指定 */
-}
-
 .input-p {
     font-size: 1.2rem;
 }
@@ -305,4 +280,10 @@ p {
 
   .privacy-mark{
     display: inline-block;
+  }
+
+  /*skill sheet*/
+  iframe#parentframe { 
+    width: 100%;
+    height: 500px;
   }
