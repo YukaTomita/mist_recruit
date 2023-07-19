@@ -19,7 +19,7 @@
     line-height: 1.1;
 }
 .size-img {
-    max-width: 185px;
+    max-width: 200px;
     margin: 5px 20px;
 }
 .flex-img button{
@@ -104,3 +104,21 @@
 img {
     width:100%;
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1;
+}
+  .popup img{
+    width: auto;
+    height: auto;
+  }

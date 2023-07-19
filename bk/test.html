@@ -1,30 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ラジオボタン</title>
+  <title>もっと見るボタン</title>
+  <style>
+    .photo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .photo {
+      position: relative;
+      margin: 10px;
+    }
+    
+    .photo img {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 400px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
-  <form>
-    <fieldset>
-      <legend>選択肢</legend>
-      <table>
-        <tr>
-          <td><input type="radio" name="option" value="option1"></td>
-          <td><input type="radio" name="option" value="option2"></td>
-          <td><input type="radio" name="option" value="option3"></td>
-        </tr>
-        <tr>
-          <td><input type="radio" name="option" value="option1"></td>
-          <td><input type="radio" name="option" value="option2"></td>
-          <td><input type="radio" name="option" value="option3"></td>
-        </tr>
-        <tr>
-          <td><input type="radio" name="option" value="option1"></td>
-          <td><input type="radio" name="option" value="option2"></td>
-          <td><input type="radio" name="option" value="option3"></td>
-        </tr>
-      </table>
-    </fieldset>
-  </form>
+  <div class="photo-container">
+    <div class="photo">
+      <img src="photo1.jpg" alt="写真1">
+      <button onclick="showPopup(1)">もっと見る</button>
+      <div class="popup" id="popup1">
+        <img src="photo1.jpg" alt="写真1">
+        <h2>名前1</h2>
+        <p>テキスト1。ここにポップアップのテキストを追加します。</p>
+        <button onclick="hidePopup(1)">閉じる</button>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="photo2.jpg" alt="写真2">
+      <button onclick="showPopup(2)">もっと見る</button>
+      <div class="popup" id="popup2">
+        <img src="photo2.jpg" alt="写真2">
+        <h2>名前2</h2>
+        <p>テキスト2。ここにポップアップのテキストを追加します。</p>
+        <button onclick="hidePopup(2)">閉じる</button>
+      </div>
+    </div>
+    <!-- 他の写真も同様に続く -->
+  </div>
+  
+  <script>
+    function showPopup(popupId) {
+      var popup = document.getElementById("popup" + popupId);
+      popup.style.display = "block";
+    }
+    
+    function hidePopup(popupId) {
+      var popup = document.getElementById("popup" + popupId);
+      popup.style.display = "none";
+    }
+  </script>
 </body>
 </html>
