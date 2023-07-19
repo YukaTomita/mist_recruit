@@ -70,5 +70,25 @@ radioButtons.forEach(radioButton => {
   }
 });
 
+// 個人情報同意・エントリーアクティブ
 
 
+window.addEventListener("DOMContentLoaded", function() {
+  var agreeButton = document.getElementById("agreeButton");
+  var entryButton = document.getElementById("entryButton");
+
+  agreeButton.addEventListener("click", function(event) {
+    if (agreeButton.classList.contains("active")) {
+      agreeButton.classList.remove("active");
+      entryButton.setAttribute("disabled", "disabled");
+      entryButton.classList.remove("active");
+      entryButton.style.backgroundColor = "";
+    } else {
+      agreeButton.classList.add("active");
+      entryButton.removeAttribute("disabled");
+      entryButton.classList.add("active");
+      entryButton.style.backgroundColor = "green";
+    }
+    event.preventDefault(); // ページのリロードを防止
+  });
+});

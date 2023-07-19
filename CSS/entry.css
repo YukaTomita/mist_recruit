@@ -85,7 +85,10 @@ table {
     vertical-align: middle;
   }
   
-
+.other-skill{
+    border: none;
+    outline: none;
+}
 /* 備考欄 */
 textarea {
     width: 700px;
@@ -250,6 +253,7 @@ p {
 }
 .btn1 {
     margin: auto;
+    margin-left: 130px;
     width: 150px;
     height: 30px;
     background-color: white;
@@ -287,3 +291,9 @@ p {
     width: 100%;
     height: 500px;
   }
+
+/* PrivacyMark */
+.privacy-mark{
+    float: right;
+    margin-left: 10px;   
+}
