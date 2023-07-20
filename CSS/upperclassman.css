@@ -45,66 +45,8 @@
 .img-bottom {
     margin: 100px auto;
 }
-/* -------------------
-モーダル
--------------------- */
-.overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    opacity: .6;
-    display: none;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .modal {
-    width: 500px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-  
-  .modal p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    font-size: 14px;
-  }
-  
-  .modal-close__wrap {
-    position: absolute;
-    right: 50px;
-    bottom: 30px;
-  }
-  
-  .modal-close {
-    width: 100px;
-    display: block;
-    height: 28px;
-  }
-  
 
-  .overlay.open {
-    display: block;
-  }
-  
-  .modal.open {
-    display: block;
-  }
-  /* 画像100% */
-img {
-    width:100%;
-}
-
+/* popup */
 .popup {
   display: none;
   position: fixed;
@@ -112,13 +54,27 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
-  height: 300px;
-  background-color: #f1f1f1;
+  height: 400px;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
   z-index: 1;
 }
-  .popup img{
-    width: auto;
+  .popimg{
+    width: 60%;
     height: auto;
+    margin-top: 20px;
+  }
+  .poptitle{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .poptxt{
+    margin-top: 25px;
+    line-height: 2rem;
+  }
+  .popup .close-button {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
   }

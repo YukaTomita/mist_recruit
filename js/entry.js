@@ -1,18 +1,28 @@
 // アコーディオンメニューの動作を制御するJavaScript
 document.addEventListener("DOMContentLoaded", function () {
-    var accordionHeaders = document.querySelectorAll(".accordion-header");
+  var accordionHeaders = document.querySelectorAll(".accordion-header");
+  var firstAccordionItem = document.querySelector(".accordion-item");
 
-    accordionHeaders.forEach(function (header) {
-        header.addEventListener("click", function () {
-            var accordionItem = this.parentElement;
+  // 最初のアコーディオンを開く
+  firstAccordionItem.classList.add("active");
 
-            if (accordionItem.classList.contains("active")) {
-                accordionItem.classList.remove("active");
-            } else {
-                accordionItem.classList.add("active");
-            }
+  accordionHeaders.forEach(function (header) {
+    header.addEventListener("click", function () {
+      var accordionItem = this.parentElement;
+
+      if (!accordionItem.classList.contains("active")) {
+        // クリックされたアコーディオン以外のコンテンツを閉じる
+        accordionHeaders.forEach(function (otherHeader) {
+          var otherAccordionItem = otherHeader.parentElement;
+          if (otherHeader !== header && otherAccordionItem.classList.contains("active")) {
+            otherAccordionItem.classList.remove("active");
+          }
         });
+      }
+
+      accordionItem.classList.toggle("active");
     });
+  });
 });
 
 //レベルの〇をつける
@@ -92,3 +102,4 @@ window.addEventListener("DOMContentLoaded", function() {
     event.preventDefault(); // ページのリロードを防止
   });
 });
+
